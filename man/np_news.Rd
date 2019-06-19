@@ -4,12 +4,10 @@
 \alias{np_news}
 \title{Get News contents}
 \usage{
-np_news(target_url, silent = F)
+np_news(target_url)
 }
 \arguments{
 \item{target_url}{target url}
-
-\item{silent}{FALSE is defualt.}
 }
 \description{
 Get News contents

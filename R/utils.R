@@ -17,21 +17,24 @@ url_to_name <- function(target_url) {
     stringr::str_replace_all("[^a-zA-Z0-9]", "_")
 }
 
-support_info <- function(name_) {
-  system.file("yaml",
-              stringr::str_c(name_, ".yml"),
-              package = "newspaper") %>%
-
-    yaml::read_yaml() %>%
+support_info <- function(name_, config) {
+  config %>%
     .[4:9] %>%
     dplyr::as_tibble() %>%
     tidyr::unnest() %>%
-    list(
-      content = dplyr::select_if(~ !is.na(.)),
-      error = all(is.na(.))
-    )
+    list(content = .,
+         error = all(is.na(.))) %>%
+    return()
 }
-#' @importFrom urltools
+
+content_for_use <- function(x) {
+  dplyr::mutate(x, rowid = c("node","attr")) %>%
+    tidyr::gather(where, value, -rowid) %>%
+    tidyr::spread(rowid, value) %>%
+    dplyr::select(where, node, attr) %>%
+    dplyr::filter(!is.na(node))
+}
+
 #' @importFrom stringr str_detect
 is_url <- function(target_url){
   stringr::str_detect(

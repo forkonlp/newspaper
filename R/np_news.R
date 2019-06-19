@@ -7,7 +7,7 @@
 #' @export
 np_news <- function(target_url){
 
-  if (is_url(target_url)) {
+  if (!is_url(target_url)) {
     stop("Is it valid url?")
   }
 
@@ -18,18 +18,26 @@ np_news <- function(target_url){
           please add issue https://github.com/forkonlp/newspaper/issues")
   }
 
-  c(conditions, error) %<-% support_info(name)
+  config <- system.file("yaml",
+                    stringr::str_c(name_, ".yml"),
+                    package = "newspaper") %>%
+              yaml::read_yaml()
+
+  c(conditions, error) %<-% support_info(name, config)
 
   if (error) {
     stop("This site is on the list but can't get information.")
   }
 
+  hobj <- xml2::read_html(target_url, encoding = config$encoding)
+
   conditions %>%
+    content_for_use() %>%
+    dplyr::mutate(prep = stringr::str_c(where,"_",config$name)) %>%
     purrr::pmap_dfr(function(site, where, node, attr, prep) {
       tibble::tibble(col = where, value = np_info(hobj, node, attr, prep))
     }) %>%
     tidyr::spread(col, value)
-
 }
 
 #' @importFrom rvest html_nodes html_text html_attr
@@ -46,6 +54,6 @@ np_info <- function(hobj,
       is.na(attr) ~ rvest::html_text(.),
       ~ rvest::html_attr(attr)
     ) %>%
-    match.fun(prep)()
+    finish(prep, .)
 }
 
