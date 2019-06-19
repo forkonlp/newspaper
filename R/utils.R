@@ -1,14 +1,37 @@
 #' @import dplyr
 #' @importFrom stringr str_detect
 #' @importFrom urltools domain
-get_el <- function(target_url){
-  site <- NULL
-  target_domain <- urltools::domain(target_url)
-  config_main %>%
-    dplyr::filter(stringr::str_detect(site, target_domain)) %>%
+chk_list <- function(name_){
+  name <- NULL
+  tar_name %>%
+    dplyr::pull(name) %>%
+    stringr::str_detect(name_) %>%
+    any() %>%
     return()
 }
 
+url_to_name <- function(target_url) {
+  target_url %>%
+    urltools::domain() %>%
+    stringr::str_remove("www.?\\.") %>%
+    stringr::str_replace_all("[^a-zA-Z0-9]", "_")
+}
+
+support_info <- function(name_) {
+  system.file("yaml",
+              stringr::str_c(name_, ".yml"),
+              package = "newspaper") %>%
+
+    yaml::read_yaml() %>%
+    .[4:9] %>%
+    dplyr::as_tibble() %>%
+    tidyr::unnest() %>%
+    list(
+      content = dplyr::select_if(~ !is.na(.)),
+      error = all(is.na(.))
+    )
+}
+#' @importFrom urltools
 #' @importFrom stringr str_detect
 is_url <- function(target_url){
   stringr::str_detect(

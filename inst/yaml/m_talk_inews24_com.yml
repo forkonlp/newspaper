@@ -1,0 +1,21 @@
+name: m_talk_inews24_com
+site: http://m-talk.inews24.com/php/news_list_mtalk.php?g_menu=380010
+encoding: UTF-8
+title:
+  node: .na
+  attr: .na
+body:
+  node: .na
+  attr: .na
+from:
+  node: .na
+  attr: .na
+published_at:
+  node: .na
+  attr: .na
+edited_at:
+  node: .na
+  attr: .na
+by:
+  node: .na
+  attr: .na

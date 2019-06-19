@@ -20,6 +20,8 @@ Imports:
     readr,
     dplyr,
     stringr,
-    urltools
+    urltools,
+    xml2,
+    zeallot
 Suggests: 
     testthat (>= 2.1.0)

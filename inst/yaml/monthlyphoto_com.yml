@@ -1,0 +1,21 @@
+name: monthlyphoto_com
+site: http://www.monthlyphoto.com/index.do
+encoding: UTF-8
+title:
+  node: .na
+  attr: .na
+body:
+  node: .na
+  attr: .na
+from:
+  node: .na
+  attr: .na
+published_at:
+  node: .na
+  attr: .na
+edited_at:
+  node: .na
+  attr: .na
+by:
+  node: .na
+  attr: .na
