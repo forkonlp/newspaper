@@ -1,5 +1,6 @@
+#' @export
 np_news <- function(){
-  letters
+  config_main
 }
 
 np_news_title <- function(){
