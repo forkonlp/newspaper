@@ -10,11 +10,11 @@ np_news_body <- function(){
   letters
 }
 
-np_news_from <- function(){
+np_news_published_at <- function(){
   letters
 }
 
-np_news_at <- function(){
+np_news_edited_at <- function(){
   letters
 }
 

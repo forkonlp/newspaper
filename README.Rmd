@@ -33,3 +33,7 @@ This is a basic example which shows you how to solve a common problem:
 ## basic example code
 ```
 
+## Target Site
+
+[미디어맵](http://www.mediamap.co.kr/)에 등록된 사이트
+
