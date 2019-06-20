@@ -19,7 +19,7 @@ np_news <- function(target_url){
   }
 
   config <- system.file("yaml",
-                    stringr::str_c(name_, ".yml"),
+                    stringr::str_c(name, ".yml"),
                     package = "newspaper") %>%
               yaml::read_yaml()
 
@@ -29,7 +29,7 @@ np_news <- function(target_url){
     stop("This site is on the list but can't get information.")
   }
 
-  hobj <- xml2::read_html(target_url, encoding = config$encoding)
+  hobj <- read(stringr::str_c("read_", name))(target_url)
 
   conditions %>%
     content_for_use() %>%
@@ -37,7 +37,8 @@ np_news <- function(target_url){
     purrr::pmap_dfr(function(site, where, node, attr, prep) {
       tibble::tibble(col = where, value = np_info(hobj, node, attr, prep))
     }) %>%
-    tidyr::spread(col, value)
+    tidyr::spread(col, value) %>%
+    select(where[where %in% names(.)])
 }
 
 #' @importFrom rvest html_nodes html_text html_attr
@@ -54,6 +55,6 @@ np_info <- function(hobj,
       is.na(attr) ~ rvest::html_text(.),
       ~ rvest::html_attr(attr)
     ) %>%
-    finish(prep, .)
+    finish(prep)
 }
 

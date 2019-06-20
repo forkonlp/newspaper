@@ -99,4 +99,15 @@ where <- c("title",
 usethis::use_data(tar_name, where,
                   overwrite = TRUE, internal = TRUE)
 
-
+# library(tidyr)
+# library(glue)
+# tar_name %>%
+#   crossing(where) %>%
+#   glue_data("{where}_{name} <- function(x) x") %>%
+#   writeLines("R/finish_basic.R")
+#
+# library(tidyr)
+# library(glue)
+# tar_name %>%
+#   glue_data("read_{name} <- function(x) read_html(x, encoding='UTF-8')") %>%
+#   writeLines("R/read_basic.R")
