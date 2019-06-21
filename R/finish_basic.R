@@ -11,13 +11,24 @@ from_1318virus_net <- function(x) x
 published_at_1318virus_net <- function(x) x
 title_1318virus_net <- function(x) x
 body_1gan_co_kr <- function(x) stringr::str_squish(x)
-by_1gan_co_kr <- function(x) x
+by_1gan_co_kr <- function(x) {
+  stringr::str_split(x, " ") %>%
+    .[[1]] %>% .[1] %>%
+    return()
+}
 edited_at_1gan_co_kr <- function(x) x
 from_1gan_co_kr <- function(x) {
     tem <- stringr::str_split(trimws(x), " ")[[1]]
     return(tem[length(tem)])
   }
-published_at_1gan_co_kr <- function(x) x
+published_at_1gan_co_kr <- function(x) {
+  trimws(x) %>%
+    stringr::str_split(" ") %>%
+    .[[1]] %>% .[-1] %>%
+    stringr::str_c(collapse = " ") %>%
+    lubridate::ymd_hm(tz = "Asia/Seoul") %>%
+    return()
+}
 title_1gan_co_kr <- function(x) x
 body_ablenews_co_kr <- function(x) x
 by_ablenews_co_kr <- function(x) x

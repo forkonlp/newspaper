@@ -8,14 +8,14 @@ body:
   node: div#articleBody
   attr: .na
 from:
-  node: title
+  node: head title
   attr: .na
 published_at:
-  node: .na
+  node: div.info ul li.date
   attr: .na
 edited_at:
   node: .na
   attr: .na
 by:
-  node: .na
+  node: div.info ul li.name
   attr: .na

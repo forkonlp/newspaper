@@ -21,7 +21,7 @@ support_info <- function(name_, config) {
   config %>%
     .[4:9] %>%
     dplyr::as_tibble() %>%
-    tidyr::unnest() %>%
+    dplyr::mutate_all(as.character) %>%
     list(content = .,
          error = all(is.na(.))) %>%
     return()
