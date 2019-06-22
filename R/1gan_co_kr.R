@@ -1,10 +1,10 @@
 read_1gan_co_kr <- function(x) xml2::read_html(x)
 
-by_1gan_co_kr <- function(x) {
-  stringr::str_split(x, " ") %>%
-    .[[1]] %>% .[1] %>%
-    return()
-}
+# by_1gan_co_kr <- function(x) {
+#   stringr::str_split(x, " ") %>%
+#     .[[1]] %>% .[1] %>%
+#     return()
+# }
 
 from_1gan_co_kr <- function(x) {
   tem <- stringr::str_split(trimws(x), " ")[[1]]

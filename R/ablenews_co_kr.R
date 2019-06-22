@@ -5,7 +5,9 @@ from_ablenews_co_kr <- function(x) {
 }
 
 published_at_ablenews_co_kr <- function(x) {
-  stringr::str_split(x[3], stringr::fixed(" : ")) %>%
+  as.character(x) %>%
+    .[stringr::str_detect(., intToUtf8(c(44592,49324,51089,49457,51068)))] %>%
+    stringr::str_split(stringr::fixed(" : ")) %>%
     .[[1]] %>% .[2] %>% finish_at_basic()
 }
 

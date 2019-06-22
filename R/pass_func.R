@@ -1,7 +1,15 @@
 finish <- function(dat, func) {
   finish_func <- try(match.fun(func), silent = T)
-  if (is.function(finish_func)) { finish_func(dat) } else { finish_basic(dat) }
+  if (is.function(finish_func)){
+    finish_func(dat)
+  } else if (is_at(func)) {
+    finish_at_basic(dat)
+  } else {
+    finish_basic(dat)
+  }
 }
+
+is_at <- function(x) stringr::str_detect(x, stringr::fixed("_at"))
 
 finish_basic <- function(x) stringr::str_squish(x[1])
 

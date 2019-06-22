@@ -30,7 +30,14 @@ remotes::install_github("forkonlp/newspaper")
 This is a basic example which shows you how to solve a common problem:
 
 ```{r example}
-## basic example code
+library(newspaper)
+library(dplyr)
+
+np_news("http://www.100ssd.co.kr/news/articleView.html?idxno=62271") %>% glimpse()
+np_news("http://1318virus.net/?p=1129") %>% glimpse()
+np_news("http://www.1gan.co.kr/news/articleView.html?idxno=179119") %>% glimpse()
+np_news("http://www.ablenews.co.kr/News/NewsContent.aspx?CategoryCode=0014&NewsCode=001420190620151645090595") %>% glimpse()
+
 ```
 
 ## Target Site
