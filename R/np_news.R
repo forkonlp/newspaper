@@ -35,16 +35,13 @@ np_news <- function(target_url){
     tibbler()
 }
 
-na_proccess <- function(list_data){
-  list_data %>%
-    purrr::map(
-      ~ .x$value
-    )
-}
-
-tibbler <- function(condition_list){
+#' @importFrom purrr map_dfc
+#' @importFrom dplyr select
+tibbler <- function(condition_list) {
   condition_list %>%
-    tidyr::spread(col, value) %>%
+    purrr::map_dfc(
+      ~ tibble::tibble(!!.x$col := .x$value)
+      ) %>%
     dplyr::select(where[where %in% names(.)])
 }
 
@@ -59,6 +56,7 @@ np_info <- function(hobj,
   hobj %>%
     rvest::html_nodes(node) %>%
     purrr::when(
+      length(.) == 0 ~ "NA",
       attr == "NA" ~ rvest::html_text(.),
       ~ rvest::html_attr(attr)
     ) %>%
