@@ -57,8 +57,8 @@ np_info <- function(hobj,
     rvest::html_nodes(node) %>%
     purrr::when(
       length(.) == 0 ~ "NA",
-      attr == "NA" ~ rvest::html_text(.),
-      ~ rvest::html_attr(attr)
+      attr != "NA" ~ rvest::html_attr(., attr),
+      attr == "NA" ~ rvest::html_text(.)
     ) %>%
     finish(prep)
 }

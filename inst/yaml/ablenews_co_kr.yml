@@ -2,20 +2,20 @@ name: ablenews_co_kr
 site: http://www.ablenews.co.kr/
 encoding: UTF-8
 title:
-  node: .na
+  node: h3.NewsTitleBox
   attr: .na
 body:
-  node: .na
+  node: div.PhotoBox
   attr: .na
 from:
-  node: .na
+  node: title
   attr: .na
 published_at:
-  node: .na
+  node: div#NewsContent div
   attr: .na
 edited_at:
   node: .na
   attr: .na
 by:
-  node: .na
+  node: a#ctl00_cphNewsMiddle_UcNewsContent1_hlWriteNameTotal
   attr: .na
