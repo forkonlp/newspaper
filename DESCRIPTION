@@ -17,9 +17,10 @@ Depends:
 Imports: 
     tibble,
     magrittr,
-    readr,
     dplyr,
     stringr,
+    purrr,
+    rvest,
     urltools,
     xml2,
     zeallot
