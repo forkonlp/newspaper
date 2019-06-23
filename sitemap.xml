@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://mrchypark.github.io/newspaper/index.html</loc>
+  </url>
+  <url>
+    <loc>https://mrchypark.github.io/newspaper/reference/newspaper-package.html</loc>
+  </url>
+  <url>
+    <loc>https://mrchypark.github.io/newspaper/reference/np_news.html</loc>
+  </url>
+  <url>
+    <loc>https://mrchypark.github.io/newspaper/reference/pipe.html</loc>
+  </url>
+  <url>
+    <loc>https://mrchypark.github.io/newspaper/reference/zpipe.html</loc>
+  </url>
+</urlset>
