@@ -1,21 +1,21 @@
 name: aflnews_co_kr
 site: http://www.aflnews.co.kr/
-encoding: UTF-8
+encoding: euc-kr
 title:
-  node: .na
+  node: div.headline h3
   attr: .na
 body:
-  node: .na
+  node: div#articleBody.cont-body
   attr: .na
 from:
-  node: .na
-  attr: .na
+  node: div#HeadLogo td a img
+  attr: alt
 published_at:
-  node: .na
+  node: div.headline span.info span
   attr: .na
 edited_at:
   node: .na
   attr: .na
 by:
-  node: .na
+  node: div.headline span.info em.info-txt
   attr: .na

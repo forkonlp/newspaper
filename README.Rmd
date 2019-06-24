@@ -16,7 +16,6 @@ knitr::opts_chunk$set(
 
 <!-- badges: start -->
 [![Travis build status](https://travis-ci.org/forkonlp/newspaper.svg?branch=master)](https://travis-ci.org/forkonlp/newspaper)
-[![Codecov test coverage](https://codecov.io/gh/forkonlp/newspaper/branch/master/graph/badge.svg)](https://codecov.io/gh/forkonlp/newspaper?branch=master)
 [![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/forkonlp/newspaper?branch=master&svg=true)](https://ci.appveyor.com/project/forkonlp/newspaper)
 <!-- badges: end -->
 
@@ -44,9 +43,10 @@ np_news("http://www.100ssd.co.kr/news/articleView.html?idxno=62271") %>% glimpse
 np_news("http://1318virus.net/?p=1129") %>% glimpse()
 np_news("http://www.1gan.co.kr/news/articleView.html?idxno=179119") %>% glimpse()
 np_news("http://www.ablenews.co.kr/News/NewsContent.aspx?CategoryCode=0014&NewsCode=001420190620151645090595") %>% glimpse()
+np_news("http://www.abouthr.co.kr/news/articleView.html?idxno=2554") %>% glimpse()
+np_news("http://www.aflnews.co.kr/news/articleView.html?idxno=158380") %>% glimpse()
 
 ```
 
 ## Target Site
 
-[沃섎챶逾

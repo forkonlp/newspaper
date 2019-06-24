@@ -3,6 +3,14 @@
 
 # newspaper
 
+<!-- badges: start -->
+
+[![Travis build
+status](https://travis-ci.org/forkonlp/newspaper.svg?branch=master)](https://travis-ci.org/forkonlp/newspaper)
+[![AppVeyor build
+status](https://ci.appveyor.com/api/projects/status/github/forkonlp/newspaper?branch=master&svg=true)](https://ci.appveyor.com/project/forkonlp/newspaper)
+<!-- badges: end -->
+
 The goal of newspaper is to extract contents from Newspaper’s website.
 
 ## Installation
@@ -67,8 +75,24 @@ np_news("http://www.ablenews.co.kr/News/NewsContent.aspx?CategoryCode=0014&NewsC
 #> $ published_at <dttm> 2019-06-20 15:10:14
 #> $ edited_at    <dttm> NA
 #> $ by           <chr> "최석범 기자"
+np_news("http://www.abouthr.co.kr/news/articleView.html?idxno=2554") %>% glimpse()
+#> Observations: 1
+#> Variables: 6
+#> $ title        <chr> "학습 민첩성(Learning Agility), 어떻게 키울 것인가?"
+#> $ body         <chr> "급변하는 경영환경하에서 회사들이 향후에도 지속적으로 성공하기 위해서는 학습 민첩성(Le...
+#> $ from         <chr> "월간 인재경영"
+#> $ published_at <dttm> 2017-07-26 17:21:00
+#> $ edited_at    <dttm> NA
+#> $ by           <chr> "박찬균 바이탈경영교육원 원장"
+np_news("http://www.aflnews.co.kr/news/articleView.html?idxno=158380") %>% glimpse()
+#> Observations: 1
+#> Variables: 6
+#> $ title        <chr> "국회 정상화 지연에 ‘임업직불제’ 도입 논의도 없어"
+#> $ body         <chr> "[농수축산신문=서정학 기자] 국회 공전으로 ‘임업직접지불제(이하 임업직불제)’ 도입을 ...
+#> $ from         <chr> "농수축산신문"
+#> $ published_at <dttm> 2019-06-21 18:39:00
+#> $ edited_at    <dttm> NA
+#> $ by           <chr> "서정학 기자"
 ```
 
 ## Target Site
-
-[미디어맵](http://www.mediamap.co.kr/)에 등록된 사이트

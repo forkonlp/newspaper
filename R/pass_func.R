@@ -14,7 +14,7 @@ is_at <- function(x) stringr::str_detect(x, stringr::fixed("_at"))
 finish_basic <- function(x) stringr::str_squish(x[1])
 
 finish_at_basic <- function(x) {
-  stringr::str_squish(x[1]) %>%
+  finish_basic(x) %>%
     lubridate::ymd_hms(tz = "Asia/Seoul", quiet = T)
 }
 
