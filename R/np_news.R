@@ -1,11 +1,12 @@
 #' Get News contents
 #'
 #' @param target_url target url
+#' @param format tibble and list
 #'
 #' @importFrom purrr pmap
 #'
 #' @export
-np_news <- function(target_url){
+np_news <- function(target_url, format = c("tibble", "list")){
 
   if (!is_url(target_url)) {
     stop("Is it valid url?")
@@ -26,13 +27,17 @@ np_news <- function(target_url){
 
   hobj <- newspaper:::read(stringr::str_c("read_", name))(target_url)
 
+  format <- match.arg(format)
+
   conditions %>%
     newspaper:::content_for_use() %>%
     dplyr::mutate(prep = stringr::str_c(where,"_",config$name)) %>%
     purrr::pmap(function(site, where, node, attr, prep) {
       list(col = where, value = np_info(hobj, node, attr, prep))
     }) %>%
-    tibbler()
+    purrr::when(
+      format == "tibble" ~ tibbler(.),
+      ~ . )
 }
 
 #' @importFrom purrr map_dfc
@@ -57,6 +62,7 @@ np_info <- function(hobj,
     rvest::html_nodes(node) %>%
     purrr::when(
       length(.) == 0 ~ "NA",
+      attr == "pass" ~ .,
       attr != "NA" ~ rvest::html_attr(., attr),
       attr == "NA" ~ rvest::html_text(.)
     ) %>%

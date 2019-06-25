@@ -1,0 +1,21 @@
+name: sedaily_com
+site: https://www.sedaily.com/
+encoding: UTF-8
+title:
+  node: meta[name="title"]
+  attr: content
+body:
+  node: div.view_con
+  attr: pass
+from:
+  node: meta[property="og:site_name"]
+  attr: content
+published_at:
+  node: div.view_top ul li.letter
+  attr: .na
+edited_at:
+  node: .na
+  attr: .na
+by:
+  node: div.view_top ul li a
+  attr: .na

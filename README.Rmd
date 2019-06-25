@@ -38,15 +38,45 @@ This is a basic example which shows you how to solve a common problem:
 ```{r example}
 library(newspaper)
 library(dplyr)
+library(purrr)
 
-np_news("http://www.100ssd.co.kr/news/articleView.html?idxno=62271") %>% glimpse()
-np_news("http://1318virus.net/?p=1129") %>% glimpse()
-np_news("http://www.1gan.co.kr/news/articleView.html?idxno=179119") %>% glimpse()
-np_news("http://www.ablenews.co.kr/News/NewsContent.aspx?CategoryCode=0014&NewsCode=001420190620151645090595") %>% glimpse()
-np_news("http://www.abouthr.co.kr/news/articleView.html?idxno=2554") %>% glimpse()
-np_news("http://www.aflnews.co.kr/news/articleView.html?idxno=158380") %>% glimpse()
+c("http://www.100ssd.co.kr/news/articleView.html?idxno=62271",
+  "http://1318virus.net/?p=1129",
+  "http://www.1gan.co.kr/news/articleView.html?idxno=179119",
+  "http://www.ablenews.co.kr/News/NewsContent.aspx?CategoryCode=0014&NewsCode=001420190620151645090595",
+  "http://www.abouthr.co.kr/news/articleView.html?idxno=2554",
+  "http://www.aflnews.co.kr/news/articleView.html?idxno=158380") %>% 
+  iwalk(
+    ~ np_news(.x) %>% 
+      glimpse()
+  )
 
 ```
 
-## Target Site
+## 네이버 뉴스 스탠드 주요 언론사
 
+```{r}
+c("https://newstapa.org/44014",
+  "http://news.kmib.co.kr/article/view.asp?arcid=0924085038&code=11121400&sid1=pol&cp=nv2",
+  "https://www.sedaily.com/NewsView/1VKJK15CHP",
+  "http://sports.chosun.com/news/ntype5.htm?id=201906250100173480011943&ServiceDate=20190624",
+  "http://isplus.live.joins.com/news/article/article.asp?total_id=23504743",
+  "http://www.mediatoday.co.kr/news/articleView.html?idxno=200760",
+  "http://biz.chosun.com/site/data/html_dir/2019/06/24/2019062402909.html",
+  "http://www.zdnet.co.kr/view/?no=20190624164954",
+  "https://www.hankyung.com/economy/article/2019062450611",
+  "http://www.segye.com/newsView/20190624511168",
+  "http://www.yonhapnewstv.co.kr/MYH20190624017300038/",
+  "http://www.fnnews.com/news/201906231503559480",
+  "http://www.sportalkorea.com/news/view.php?gisa_uniq=2019062413381708&key=&page=1&field=&section_code=10",
+  "http://www.donga.com/news/NewsStand/article/all/20190624/96160046/1",
+  "https://news.joins.com/article/23505282",
+  "https://www.hankookilbo.com/News/Read/201906242396749918?did=NS&dtype=2&dtypecode=9690&prnewsid=",
+  "http://www.newdaily.co.kr/site/data/html/2019/06/24/2019062400170.html",
+  "https://news.sbs.co.kr/news/endPage.do?news_id=N1005323012&plink=STAND&cooper=NAVER") %>% 
+  iwalk(
+    ~ purrr::safely(np_news)(.x) %>% 
+      .$result %>% 
+      glimpse()
+  )
+```
