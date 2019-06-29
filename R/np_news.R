@@ -42,6 +42,7 @@ na_proccess <- function(list_data){
     )
 }
 
+#' @export
 tibbler <- function(condition_list){
   condition_list %>%
     tidyr::spread(col, value) %>%

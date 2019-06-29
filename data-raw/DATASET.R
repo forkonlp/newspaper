@@ -111,3 +111,12 @@ usethis::use_data(tar_name, where,
 # tar_name %>%
 #   glue_data("read_{name} <- function(x) read_html(x, encoding='UTF-8')") %>%
 #   writeLines("R/read_basic.R")
+
+
+
+
+
+# test_that("1gan_co_kr single works", {
+#   tar <- "http://www.1gan.co.kr/news/articleView.html?idxno=179096"
+#   np_info(tar)
+# })
