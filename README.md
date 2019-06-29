@@ -135,98 +135,69 @@ target %>%
 #> Observations: 1
 #> Variables: 6
 #> $ title        <chr> "'대선 주자 샌더스, 1,900조원 학자금 빚 탕감 법안 발의'"
-#> $ body         <chr> "버니 샌더스 미국 상원의원 /AFP연합뉴스 2020년 미국 대선 주자로 꼽히는 진보주의...
+#> $ body         <chr> "버니 샌더스 미국 상원의원 /AFP연합뉴스2020년 미국 대선 주자로 꼽히는 진보주의자...
 #> $ from         <chr> "서울경제"
 #> $ published_at <dttm> 2019-06-24 16:36:17
 #> $ edited_at    <dttm> NA
 #> $ by           <chr> "김창영 기자"
 #> [1] "http://sports.chosun.com/news/ntype5.htm?id=201906250100173480011943&ServiceDate=20190624"
-#> Observations: 1
-#> Variables: 6
-#> $ title        <chr> "[SC핫포커스]'성장통? DTD?' NC 급추락 어떻게 봐야하나"
-#> $ body         <chr> "◇스포츠조선DB [스포츠조선 박상경 기자]일시적 현상일까, 아니면 예고된 결과였을까.N...
-#> $ from         <chr> "스포츠조선"
-#> $ published_at <dttm> 2019-06-24 10:46:13
-#> $ edited_at    <dttm> NA
-#> $ by           <chr> "NA"
+#>  NULL
 #> [1] "http://isplus.live.joins.com/news/article/article.asp?total_id=23504743"
-#> Warning in file(file, "rt", encoding = fileEncoding): 파일("")은 오로지
-#> open = "w+"과 open = "w+b"만을 지원합니다: 전자의 것을 사용합니다
 #>  NULL
 #> [1] "http://www.mediatoday.co.kr/news/articleView.html?idxno=200760"
 #> Observations: 1
 #> Variables: 6
-#> $ title        <chr> "NA"
-#> $ body         <chr> "NA"
-#> $ from         <chr> "NA"
-#> $ published_at <dttm> NA
+#> $ title        <chr> "조선일보 ‘직장 내 괴롭힘 금지’ 사규 조항 신설"
+#> $ body         <chr> "직장 내 괴롭힘 금지 조항이 신설된 개정 근로기준법이 오는 7월16일 시행되는 가운데 ...
+#> $ from         <chr> "미디어오늘"
+#> $ published_at <dttm> 2019-06-24 17:08:00
 #> $ edited_at    <dttm> NA
-#> $ by           <chr> "NA"
+#> $ by           <chr> "정민경 기자"
 #> [1] "http://biz.chosun.com/site/data/html_dir/2019/06/24/2019062402909.html"
-#> Warning in file(file, "rt", encoding = fileEncoding): 파일("")은 오로지
-#> open = "w+"과 open = "w+b"만을 지원합니다: 전자의 것을 사용합니다
-#>  NULL
+#> Observations: 1
+#> Variables: 6
+#> $ title        <chr> "카카오뱅크 대주주 적격성 심사 '파란불'"
+#> $ body         <chr> "김범수 카카오 이사회 의장이 금융위원회의 카카오뱅크 대주주 적격성 심사 대상에 해당하지...
+#> $ from         <chr> "조선비즈"
+#> $ published_at <dttm> 2019-06-24 19:20:00
+#> $ edited_at    <dttm> 2019-06-24 19:36:00
+#> $ by           <chr> "이윤정 기자"
 #> [1] "http://www.zdnet.co.kr/view/?no=20190624164954"
 #> Warning in file(file, "rt", encoding = fileEncoding): 파일("")은 오로지
 #> open = "w+"과 open = "w+b"만을 지원합니다: 전자의 것을 사용합니다
 #>  NULL
 #> [1] "https://www.hankyung.com/economy/article/2019062450611"
-#> Observations: 1
-#> Variables: 6
-#> $ title        <chr> "NA"
-#> $ body         <chr> "NA"
-#> $ from         <chr> "NA"
-#> $ published_at <dttm> NA
-#> $ edited_at    <dttm> NA
-#> $ by           <chr> "NA"
+#> Warning in file(file, "rt", encoding = fileEncoding): 파일("")은 오로지
+#> open = "w+"과 open = "w+b"만을 지원합니다: 전자의 것을 사용합니다
+#>  NULL
 #> [1] "http://www.segye.com/newsView/20190624511168"
-#> Observations: 1
-#> Variables: 6
-#> $ title        <chr> "NA"
-#> $ body         <chr> "NA"
-#> $ from         <chr> "NA"
-#> $ published_at <dttm> NA
-#> $ edited_at    <dttm> NA
-#> $ by           <chr> "NA"
+#> Warning in file(file, "rt", encoding = fileEncoding): 파일("")은 오로지
+#> open = "w+"과 open = "w+b"만을 지원합니다: 전자의 것을 사용합니다
+#>  NULL
 #> [1] "http://www.yonhapnewstv.co.kr/MYH20190624017300038/"
 #> Warning in file(file, "rt", encoding = fileEncoding): 파일("")은 오로지
 #> open = "w+"과 open = "w+b"만을 지원합니다: 전자의 것을 사용합니다
 #>  NULL
 #> [1] "http://www.fnnews.com/news/201906231503559480"
-#> Observations: 1
-#> Variables: 6
-#> $ title        <chr> "NA"
-#> $ body         <chr> "NA"
-#> $ from         <chr> "NA"
-#> $ published_at <dttm> NA
-#> $ edited_at    <dttm> NA
-#> $ by           <chr> "NA"
+#> Warning in file(file, "rt", encoding = fileEncoding): 파일("")은 오로지
+#> open = "w+"과 open = "w+b"만을 지원합니다: 전자의 것을 사용합니다
+#>  NULL
 #> [1] "http://www.sportalkorea.com/news/view.php?gisa_uniq=2019062413381708&key=&page=1&field=&section_code=10"
 #> Warning in file(file, "rt", encoding = fileEncoding): 파일("")은 오로지
 #> open = "w+"과 open = "w+b"만을 지원합니다: 전자의 것을 사용합니다
 #>  NULL
 #> [1] "http://www.donga.com/news/NewsStand/article/all/20190624/96160046/1"
-#> Observations: 1
-#> Variables: 6
-#> $ title        <chr> "NA"
-#> $ body         <chr> "NA"
-#> $ from         <chr> "NA"
-#> $ published_at <dttm> NA
-#> $ edited_at    <dttm> NA
-#> $ by           <chr> "NA"
+#> Warning in file(file, "rt", encoding = fileEncoding): 파일("")은 오로지
+#> open = "w+"과 open = "w+b"만을 지원합니다: 전자의 것을 사용합니다
+#>  NULL
 #> [1] "https://news.joins.com/article/23505282"
 #> Warning in file(file, "rt", encoding = fileEncoding): 파일("")은 오로지
 #> open = "w+"과 open = "w+b"만을 지원합니다: 전자의 것을 사용합니다
 #>  NULL
 #> [1] "https://www.hankookilbo.com/News/Read/201906242396749918?did=NS&dtype=2&dtypecode=9690&prnewsid="
-#> Observations: 1
-#> Variables: 6
-#> $ title        <chr> "NA"
-#> $ body         <chr> "NA"
-#> $ from         <chr> "NA"
-#> $ published_at <dttm> NA
-#> $ edited_at    <dttm> NA
-#> $ by           <chr> "NA"
+#> Warning in file(file, "rt", encoding = fileEncoding): 파일("")은 오로지
+#> open = "w+"과 open = "w+b"만을 지원합니다: 전자의 것을 사용합니다
+#>  NULL
 #> [1] "http://www.newdaily.co.kr/site/data/html/2019/06/24/2019062400170.html"
 #> Warning in file(file, "rt", encoding = fileEncoding): 파일("")은 오로지
 #> open = "w+"과 open = "w+b"만을 지원합니다: 전자의 것을 사용합니다
@@ -236,23 +207,13 @@ target %>%
 #> open = "w+"과 open = "w+b"만을 지원합니다: 전자의 것을 사용합니다
 #>  NULL
 #> [1] "http://www.hani.co.kr/arti/society/society_general/899142.html?_ns=r2"
-#> Observations: 1
-#> Variables: 6
-#> $ title        <chr> "NA"
-#> $ body         <chr> "NA"
-#> $ from         <chr> "NA"
-#> $ published_at <dttm> NA
-#> $ edited_at    <dttm> NA
-#> $ by           <chr> "NA"
+#> Warning in file(file, "rt", encoding = fileEncoding): 파일("")은 오로지
+#> open = "w+"과 open = "w+b"만을 지원합니다: 전자의 것을 사용합니다
+#>  NULL
 #> [1] "http://www.dailian.co.kr/news/view/805409"
-#> Observations: 1
-#> Variables: 6
-#> $ title        <chr> "NA"
-#> $ body         <chr> "NA"
-#> $ from         <chr> "NA"
-#> $ published_at <dttm> NA
-#> $ edited_at    <dttm> NA
-#> $ by           <chr> "NA"
+#> Warning in file(file, "rt", encoding = fileEncoding): 파일("")은 오로지
+#> open = "w+"과 open = "w+b"만을 지원합니다: 전자의 것을 사용합니다
+#>  NULL
 #> [1] "http://news.chosun.com/site/data/html_dir/2019/06/24/2019062402306.html"
 #> Warning in file(file, "rt", encoding = fileEncoding): 파일("")은 오로지
 #> open = "w+"과 open = "w+b"만을 지원합니다: 전자의 것을 사용합니다
@@ -266,53 +227,41 @@ target %>%
 #> open = "w+"과 open = "w+b"만을 지원합니다: 전자의 것을 사용합니다
 #>  NULL
 #> [1] "https://www.edaily.co.kr/news/read?newsId=03516166622525000&mediaCodeNo=257&OutLnkChk=Y"
-#> Observations: 1
-#> Variables: 6
-#> $ title        <chr> "NA"
-#> $ body         <chr> "NA"
-#> $ from         <chr> "NA"
-#> $ published_at <dttm> NA
-#> $ edited_at    <dttm> NA
-#> $ by           <chr> "NA"
+#> Warning in file(file, "rt", encoding = fileEncoding): 파일("")은 오로지
+#> open = "w+"과 open = "w+b"만을 지원합니다: 전자의 것을 사용합니다
+#>  NULL
 #> [1] "https://www.seoul.co.kr/news/newsView.php?id=20190625005001&wlog_sub=svt_006"
+#> Warning in file(file, "rt", encoding = fileEncoding): 파일("")은 오로지
+#> open = "w+"과 open = "w+b"만을 지원합니다: 전자의 것을 사용합니다
 #>  NULL
 #> [1] "http://www.pressian.com/news/article/?no=246193"
-#> Observations: 1
-#> Variables: 6
-#> $ title        <chr> "NA"
-#> $ body         <chr> "NA"
-#> $ from         <chr> "NA"
-#> $ published_at <dttm> NA
-#> $ edited_at    <dttm> NA
-#> $ by           <chr> "NA"
+#> Warning in file(file, "rt", encoding = fileEncoding): 파일("")은 오로지
+#> open = "w+"과 open = "w+b"만을 지원합니다: 전자의 것을 사용합니다
+#>  NULL
 #> [1] "http://mbn.mk.co.kr/pages/news/newsView.php?ref=newsstand&news_seq_no=3870180&pos=20002_3"
 #> Warning in file(file, "rt", encoding = fileEncoding): 파일("")은 오로지
 #> open = "w+"과 open = "w+b"만을 지원합니다: 전자의 것을 사용합니다
 #>  NULL
 #> [1] "http://www.dt.co.kr/contents.html?article_no=2019062402109932781002&naver=stand"
+#> Warning in file(file, "rt", encoding = fileEncoding): 파일("")은 오로지
+#> open = "w+"과 open = "w+b"만을 지원합니다: 전자의 것을 사용합니다
 #>  NULL
 #> [1] "https://www.nocutnews.co.kr/news/5171990"
-#> Observations: 1
-#> Variables: 6
-#> $ title        <chr> "NA"
-#> $ body         <chr> "NA"
-#> $ from         <chr> "NA"
-#> $ published_at <dttm> NA
-#> $ edited_at    <dttm> NA
-#> $ by           <chr> "NA"
+#> Warning in file(file, "rt", encoding = fileEncoding): 파일("")은 오로지
+#> open = "w+"과 open = "w+b"만을 지원합니다: 전자의 것을 사용합니다
+#>  NULL
 #> [1] "https://www.mk.co.kr/news/politics/view/2019/06/451795/"
+#> Warning in file(file, "rt", encoding = fileEncoding): 파일("")은 오로지
+#> open = "w+"과 open = "w+b"만을 지원합니다: 전자의 것을 사용합니다
 #>  NULL
 #> [1] "https://www.ytn.co.kr/_ln/0103_201906241617041128_005"
+#> Warning in file(file, "rt", encoding = fileEncoding): 파일("")은 오로지
+#> open = "w+"과 open = "w+b"만을 지원합니다: 전자의 것을 사용합니다
 #>  NULL
 #> [1] "http://www.bloter.net/archives/343946"
-#> Observations: 1
-#> Variables: 6
-#> $ title        <chr> "NA"
-#> $ body         <chr> "NA"
-#> $ from         <chr> "NA"
-#> $ published_at <dttm> NA
-#> $ edited_at    <dttm> NA
-#> $ by           <chr> "NA"
+#> Warning in file(file, "rt", encoding = fileEncoding): 파일("")은 오로지
+#> open = "w+"과 open = "w+b"만을 지원합니다: 전자의 것을 사용합니다
+#>  NULL
 #> [1] "http://news.mt.co.kr/mtview.php?no=2019062418127667075&cast=1&STAND=MTS_P"
 #> Warning in file(file, "rt", encoding = fileEncoding): 파일("")은 오로지
 #> open = "w+"과 open = "w+b"만을 지원합니다: 전자의 것을 사용합니다
@@ -322,14 +271,9 @@ target %>%
 #> open = "w+"과 open = "w+b"만을 지원합니다: 전자의 것을 사용합니다
 #>  NULL
 #> [1] "http://www.newsis.com/view/?id=NISX20190624_0000690173&cid="
-#> Observations: 1
-#> Variables: 6
-#> $ title        <chr> "NA"
-#> $ body         <chr> "NA"
-#> $ from         <chr> "NA"
-#> $ published_at <dttm> NA
-#> $ edited_at    <dttm> NA
-#> $ by           <chr> "NA"
+#> Warning in file(file, "rt", encoding = fileEncoding): 파일("")은 오로지
+#> open = "w+"과 open = "w+b"만을 지원합니다: 전자의 것을 사용합니다
+#>  NULL
 #> [1] "http://news.jtbc.joins.com/html/034/NB11838034.html"
 #> Warning in file(file, "rt", encoding = fileEncoding): 파일("")은 오로지
 #> open = "w+"과 open = "w+b"만을 지원합니다: 전자의 것을 사용합니다
@@ -339,33 +283,25 @@ target %>%
 #> open = "w+"과 open = "w+b"만을 지원합니다: 전자의 것을 사용합니다
 #>  NULL
 #> [1] "http://www.mydaily.co.kr/new_yk/html/read.php?newsid=201906242319596580"
+#> Warning in file(file, "rt", encoding = fileEncoding): 파일("")은 오로지
+#> open = "w+"과 open = "w+b"만을 지원합니다: 전자의 것을 사용합니다
 #>  NULL
 #> [1] "http://www.munhwa.com/news/view.html?no=20190624MW145118207290&w=ns"
 #> Warning in file(file, "rt", encoding = fileEncoding): 파일("")은 오로지
 #> open = "w+"과 open = "w+b"만을 지원합니다: 전자의 것을 사용합니다
 #>  NULL
 #> [1] "http://www.sportsseoul.com/news/read/780324"
-#> Observations: 1
-#> Variables: 6
-#> $ title        <chr> "NA"
-#> $ body         <chr> "NA"
-#> $ from         <chr> "NA"
-#> $ published_at <dttm> NA
-#> $ edited_at    <dttm> NA
-#> $ by           <chr> "NA"
+#> Warning in file(file, "rt", encoding = fileEncoding): 파일("")은 오로지
+#> open = "w+"과 open = "w+b"만을 지원합니다: 전자의 것을 사용합니다
+#>  NULL
 #> [1] "http://news.kbs.co.kr/news/view.do?ncd=4228349"
 #> Warning in file(file, "rt", encoding = fileEncoding): 파일("")은 오로지
 #> open = "w+"과 open = "w+b"만을 지원합니다: 전자의 것을 사용합니다
 #>  NULL
 #> [1] "http://www.etnews.com/20190624000311?mc=ns_003_00002"
-#> Observations: 1
-#> Variables: 6
-#> $ title        <chr> "NA"
-#> $ body         <chr> "NA"
-#> $ from         <chr> "NA"
-#> $ published_at <dttm> NA
-#> $ edited_at    <dttm> NA
-#> $ by           <chr> "NA"
+#> Warning in file(file, "rt", encoding = fileEncoding): 파일("")은 오로지
+#> open = "w+"과 open = "w+b"만을 지원합니다: 전자의 것을 사용합니다
+#>  NULL
 #> [1] "http://imnews.imbc.com/replay/2019/nwdesk/article/5377194_24634.html"
 #> Warning in file(file, "rt", encoding = fileEncoding): 파일("")은 오로지
 #> open = "w+"과 open = "w+b"만을 지원합니다: 전자의 것을 사용합니다
@@ -379,21 +315,11 @@ target %>%
 #> open = "w+"과 open = "w+b"만을 지원합니다: 전자의 것을 사용합니다
 #>  NULL
 #> [1] "http://www.inews24.com/view/1180471"
-#> Observations: 1
-#> Variables: 6
-#> $ title        <chr> "NA"
-#> $ body         <chr> "NA"
-#> $ from         <chr> "NA"
-#> $ published_at <dttm> NA
-#> $ edited_at    <dttm> NA
-#> $ by           <chr> "NA"
+#> Warning in file(file, "rt", encoding = fileEncoding): 파일("")은 오로지
+#> open = "w+"과 open = "w+b"만을 지원합니다: 전자의 것을 사용합니다
+#>  NULL
 #> [1] "https://www.hankyung.com/economy/article/2019062450291"
-#> Observations: 1
-#> Variables: 6
-#> $ title        <chr> "NA"
-#> $ body         <chr> "NA"
-#> $ from         <chr> "NA"
-#> $ published_at <dttm> NA
-#> $ edited_at    <dttm> NA
-#> $ by           <chr> "NA"
+#> Warning in file(file, "rt", encoding = fileEncoding): 파일("")은 오로지
+#> open = "w+"과 open = "w+b"만을 지원합니다: 전자의 것을 사용합니다
+#>  NULL
 ```
