@@ -10,6 +10,7 @@ chk_list <- function(name_){
     return()
 }
 
+#' @export
 url_to_name <- function(target_url) {
   target_url %>%
     urltools::domain() %>%
@@ -19,7 +20,7 @@ url_to_name <- function(target_url) {
 
 support_info <- function(name_, config) {
   config %>%
-    .[4:9] %>%
+    .[3:8] %>%
     dplyr::as_tibble() %>%
     dplyr::mutate_all(as.character) %>%
     list(content = .,
@@ -41,4 +42,62 @@ is_url <- function(target_url){
     target_url,
     "^(http:\\/\\/www\\.|https:\\/\\/www\\.|http:\\/\\/|https:\\/\\/)?[a-z0-9]+([\\-\\.]{1}[a-z0-9]+)*\\.[a-z]{2,5}(:[0-9]{1,5})?(\\/.*)?$"
   )
+}
+
+#' @importFrom yaml read_yaml
+yml_template <- function(){
+  system.file("", "template.yml",
+              package = "newspaper") %>%
+    yaml::read_yaml()
+}
+
+#' yml start
+#'
+#' start
+#'
+#' @param target_url urls
+#' @param open open options
+#'
+#' @importFrom stringr str_c
+#' @importFrom urltools scheme domain
+#' @importFrom httr GET
+#'
+#' @export
+yml_start <- function(target_url, open = T){
+
+  yml_template() -> temp
+
+  newspaper:::url_to_name(target_url) -> name
+
+  filename <- str_c("./inst/yaml/" ,name, ".yml")
+
+  stringr::str_c(
+    urltools::scheme(target_url),
+    "://",
+    urltools::domain(target_url)
+  ) -> site
+
+  temp$name <- name
+  temp$site <- site
+  temp$body$attr <- "pass"
+
+  yaml::write_yaml(x = temp,
+                   file = filename,
+                   fileEncoding = "UTF-8")
+  if (open & interactive()) {
+    rstudioapi::navigateToFile(file = filename)
+    browseURL(target_url)
+  }
+}
+
+#' @export
+get_config <- function(name){
+  system.file("yaml",
+              stringr::str_c(name, ".yml"),
+              package = "newspaper") %>%
+    purrr::when(
+      . == "" ~ stop("There's no config file for this site yet."),
+      ~ .
+    ) %>%
+    yaml::read_yaml()
 }

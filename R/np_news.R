@@ -1,22 +1,22 @@
 #' Get News contents
 #'
 #' @param target_url target url
+#' @param format tibble and list
 #'
 #' @importFrom purrr pmap
 #'
 #' @export
-np_news <- function(target_url){
+np_news <- function(target_url,
+                    format = c("tibble", "list"),
+                    edited = c("na","copy")){
 
   if (!is_url(target_url)) {
     stop("Is it valid url?")
   }
 
-  name <- newspaper:::url_to_name(target_url)
+  name <- url_to_name(target_url)
 
-  config <- system.file("yaml",
-                    stringr::str_c(name, ".yml"),
-                    package = "newspaper") %>%
-              yaml::read_yaml()
+  config <- get_config(name)
 
   c(conditions, error) %<-% newspaper:::support_info(name, config)
 
@@ -26,33 +26,31 @@ np_news <- function(target_url){
 
   hobj <- newspaper:::read(stringr::str_c("read_", name))(target_url)
 
+  format <- match.arg(format)
+
   conditions %>%
     newspaper:::content_for_use() %>%
     dplyr::mutate(prep = stringr::str_c(where,"_",config$name)) %>%
     purrr::pmap(function(site, where, node, attr, prep) {
       list(col = where, value = np_info(hobj, node, attr, prep))
     }) %>%
-    tibbler()
+    purrr::when(
+      format == "tibble" ~ tibbler(.),
+      ~ . )
 }
 
-na_proccess <- function(list_data){
-  list_data %>%
-    purrr::map(
-      ~ .x$value
-    )
-}
-
-#' @export
-tibbler <- function(condition_list){
+#' @importFrom purrr map_dfc
+#' @importFrom dplyr select
+tibbler <- function(condition_list) {
   condition_list %>%
-    tidyr::spread(col, value) %>%
+    purrr::map_dfc(
+      ~ tibble::tibble(!!.x$col := .x$value)
+      ) %>%
     dplyr::select(where[where %in% names(.)])
 }
 
 #' @importFrom rvest html_nodes html_text html_attr
 #' @importFrom purrr when
-#'
-#' @export
 np_info <- function(hobj,
                     node,
                     attr,
@@ -60,8 +58,10 @@ np_info <- function(hobj,
   hobj %>%
     rvest::html_nodes(node) %>%
     purrr::when(
-      attr == "NA" ~ rvest::html_text(.),
-      ~ rvest::html_attr(attr)
+      length(.) == 0 ~ NA_character_,
+      attr == "pass" ~ .,
+      attr != "NA" ~ rvest::html_attr(., attr),
+      attr == "NA" ~ rvest::html_text(.)
     ) %>%
     finish(prep)
 }

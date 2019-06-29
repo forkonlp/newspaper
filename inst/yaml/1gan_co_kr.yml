@@ -1,6 +1,5 @@
 name: 1gan_co_kr
 site: http://www.1gan.co.kr/
-encoding: UTF-8
 title:
   node: font.headline-title
   attr: .na

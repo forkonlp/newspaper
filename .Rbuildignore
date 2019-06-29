@@ -3,3 +3,10 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
 ^data-raw$
+^.github$
+^\.travis\.yml$
+^_pkgdown\.yml$
+^docs$
+^pkgdown$
+^codecov\.yml$
+^appveyor\.yml$

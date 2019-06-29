@@ -1,0 +1,7 @@
+destination: docs
+title: newspaper
+url: https://mrchypark.github.io/newspaper
+template:
+  params:
+    bootswatch: yeti
+    ganalytics: UA-47822682-1

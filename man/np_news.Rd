@@ -4,10 +4,12 @@
 \alias{np_news}
 \title{Get News contents}
 \usage{
-np_news(target_url)
+np_news(target_url, format = c("tibble", "list"))
 }
 \arguments{
 \item{target_url}{target url}
+
+\item{format}{tibble and list}
 }
 \description{
 Get News contents

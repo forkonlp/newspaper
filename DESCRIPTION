@@ -1,6 +1,6 @@
 Package: newspaper
 Title: Newspaper's Contents Extracter
-Version: 0.0.0.9000
+Version: 0.1.0
 Authors@R: person(given = "Chanyub",
              family = "Park",
              role = c("aut","cre"),
@@ -17,11 +17,13 @@ Depends:
 Imports: 
     tibble,
     magrittr,
-    readr,
     dplyr,
     stringr,
+    purrr,
+    rvest,
     urltools,
     xml2,
     zeallot
 Suggests: 
-    testthat (>= 2.1.0)
+    testthat (>= 2.1.0),
+    covr

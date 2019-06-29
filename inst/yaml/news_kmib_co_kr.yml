@@ -1,13 +1,13 @@
-name: sports_chosun_com
-site: http://sports.chosun.com/
+name: news_kmib_co_kr
+site: http://news.kmib.co.kr/
 title:
-  node: h3.article-title
+  node: div.nwsti h3
   attr: .na
 body:
-  node: font.article
-  attr: pass
+  node: div#articleBody
+  attr: .na
 from:
-  node: meta[property="og:site_name"]
+  node: meta[name="description"]
   attr: content
 published_at:
   node: meta[property="article:published_time"]

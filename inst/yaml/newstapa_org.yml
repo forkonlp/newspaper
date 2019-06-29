@@ -1,0 +1,20 @@
+name: newstapa_org
+site: https://newstapa.org/
+title:
+  node: div.title
+  attr: .na
+body:
+  node: div.post-content div.body
+  attr: pass
+from:
+  node: meta[property="og:site_name"]
+  attr: content
+published_at:
+  node: div.date
+  attr: .na
+edited_at:
+  node: .na
+  attr: .na
+by:
+  node: div.name a
+  attr: .na

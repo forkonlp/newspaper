@@ -1,21 +1,20 @@
 name: abouthr_co_kr
 site: http://www.abouthr.co.kr/
-encoding: UTF-8
 title:
-  node: .na
+  node: span.headline-title
   attr: .na
 body:
-  node: .na
+  node: div#articleBody.cont-body
   attr: .na
 from:
-  node: .na
-  attr: .na
+  node: div#HeadLogo td a img
+  attr: alt
 published_at:
-  node: .na
+  node: div#head-info div.info span
   attr: .na
 edited_at:
   node: .na
   attr: .na
 by:
-  node: .na
+  node: div#head-info div.info strong.info-txt
   attr: .na

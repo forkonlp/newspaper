@@ -1,0 +1,20 @@
+name: zdnet_co_kr
+site: http://www.zdnet.co.kr
+title:
+  node: div.news_head h1
+  attr: .na
+body:
+  node: .na
+  attr: .na
+from:
+  node: .na
+  attr: .na
+published_at:
+  node: p.meta span
+  attr: .na
+edited_at:
+  node: .na
+  attr: .na
+by:
+  node: meta[property="dable:author"]
+  attr: content
