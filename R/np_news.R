@@ -12,12 +12,9 @@ np_news <- function(target_url, format = c("tibble", "list")){
     stop("Is it valid url?")
   }
 
-  name <- newspaper:::url_to_name(target_url)
+  name <- url_to_name(target_url)
 
-  config <- system.file("yaml",
-                    stringr::str_c(name, ".yml"),
-                    package = "newspaper") %>%
-              yaml::read_yaml()
+  config <- get_config(name)
 
   c(conditions, error) %<-% newspaper:::support_info(name, config)
 
@@ -52,8 +49,6 @@ tibbler <- function(condition_list) {
 
 #' @importFrom rvest html_nodes html_text html_attr
 #' @importFrom purrr when
-#'
-#' @export
 np_info <- function(hobj,
                     node,
                     attr,

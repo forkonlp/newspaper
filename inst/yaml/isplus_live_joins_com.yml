@@ -1,13 +1,13 @@
-name: news_kmib_co_kr
-site: http://news.kmib.co.kr/
+name: isplus_live_joins_com
+site: http://isplus.live.joins.com
 title:
-  node: div.nwsti h3
+  node: div.article_tit h2
   attr: .na
 body:
-  node: div#articleBody
+  node: div#article_content div
   attr: .na
 from:
-  node: meta[name="description"]
+  node: meta[property="dable:author"]
   attr: content
 published_at:
   node: meta[property="article:published_time"]

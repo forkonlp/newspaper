@@ -1,0 +1,20 @@
+name: biz_chosun_com
+site: http://biz.chosun.com
+title:
+  node: h1#news_title_text_id
+  attr: .na
+body:
+  node: div#news_body_id
+  attr: pass
+from:
+  node: meta[name="keywords"]
+  attr: content
+published_at:
+  node: div.news_date
+  attr: .na
+edited_at:
+  node: div.news_date
+  attr: .na
+by:
+  node: meta[property="dable:author"]
+  attr: content

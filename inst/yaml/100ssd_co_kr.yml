@@ -1,6 +1,5 @@
 name: 100ssd_co_kr
 site: http://www.100ssd.co.kr/
-encoding: UTF-8
 title:
   node: div.article-head-title
   attr: .na
