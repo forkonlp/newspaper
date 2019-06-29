@@ -5,7 +5,7 @@ title:
   attr: .na
 body:
   node: div#ts-post-the-content
-  attr: .na
+  attr: pass
 from:
   node: div.logo-image a img
   attr: alt

@@ -4,13 +4,13 @@ title:
   node: div.news_head h1
   attr: .na
 body:
-  node: .na
-  attr: .na
+  node: div#articleBody div#content
+  attr: pass
 from:
-  node: .na
-  attr: .na
+  node: div#mainNav div a
+  attr: title
 published_at:
-  node: p.meta span
+  node: div.byline p.meta span
   attr: .na
 edited_at:
   node: .na

@@ -1,0 +1,20 @@
+name: hankyung_com
+site: https://www.hankyung.com
+title:
+  node: h1.title
+  attr: .na
+body:
+  node: div#articletxt
+  attr: pass
+from:
+  node: h1.logo a img
+  attr: alt
+published_at:
+  node: span.date-published span
+  attr: .na
+edited_at:
+  node: span date-modify span
+  attr: .na
+by:
+  node: meta[property="dable:author"]
+  attr: content

@@ -1,0 +1,20 @@
+name: segye_com
+site: http://www.segye.com
+title:
+  node: h1.headline span
+  attr: .na
+body:
+  node: div.view_middleNews div#article_txt
+  attr: pass
+from:
+  node: meta[name="Author"]
+  attr: content
+published_at:
+  node: div.clearfx div.data
+  attr: .na
+edited_at:
+  node: div.clearfx div.data
+  attr: .na
+by:
+  node: meta[property="dable:author"]
+  attr: content
