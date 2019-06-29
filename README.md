@@ -49,55 +49,6 @@ np_news("http://1318virus.net/?p=1129") %>%
 library(tibble)
 library(purrr)
 
-print(target)
-#>  [1] "https://newstapa.org/44014"                                                                             
-#>  [2] "http://news.kmib.co.kr/article/view.asp?arcid=0924085038&code=11121400&sid1=pol&cp=nv2"                 
-#>  [3] "https://www.sedaily.com/NewsView/1VKJK15CHP"                                                            
-#>  [4] "http://sports.chosun.com/news/ntype5.htm?id=201906250100173480011943&ServiceDate=20190624"              
-#>  [5] "http://isplus.live.joins.com/news/article/article.asp?total_id=23504743"                                
-#>  [6] "http://www.mediatoday.co.kr/news/articleView.html?idxno=200760"                                         
-#>  [7] "http://biz.chosun.com/site/data/html_dir/2019/06/24/2019062402909.html"                                 
-#>  [8] "http://www.zdnet.co.kr/view/?no=20190624164954"                                                         
-#>  [9] "https://www.hankyung.com/economy/article/2019062450611"                                                 
-#> [10] "http://www.segye.com/newsView/20190624511168"                                                           
-#> [11] "http://www.yonhapnewstv.co.kr/MYH20190624017300038/"                                                    
-#> [12] "http://www.fnnews.com/news/201906231503559480"                                                          
-#> [13] "http://www.sportalkorea.com/news/view.php?gisa_uniq=2019062413381708&key=&page=1&field=&section_code=10"
-#> [14] "http://www.donga.com/news/NewsStand/article/all/20190624/96160046/1"                                    
-#> [15] "https://news.joins.com/article/23505282"                                                                
-#> [16] "https://www.hankookilbo.com/News/Read/201906242396749918?did=NS&dtype=2&dtypecode=9690&prnewsid="       
-#> [17] "http://www.newdaily.co.kr/site/data/html/2019/06/24/2019062400170.html"                                 
-#> [18] "https://news.sbs.co.kr/news/endPage.do?news_id=N1005323012&plink=STAND&cooper=NAVER"                    
-#> [19] "http://www.hani.co.kr/arti/society/society_general/899142.html?_ns=r2"                                  
-#> [20] "http://www.dailian.co.kr/news/view/805409"                                                              
-#> [21] "http://news.chosun.com/site/data/html_dir/2019/06/24/2019062402306.html"                                
-#> [22] "http://news.heraldcorp.com/view.php?ud=20190624000010&nt=1&md=20190624071612_BL"                        
-#> [23] "https://view.asiae.co.kr/article/2019062420075833804"                                                   
-#> [24] "https://www.edaily.co.kr/news/read?newsId=03516166622525000&mediaCodeNo=257&OutLnkChk=Y"                
-#> [25] "https://www.seoul.co.kr/news/newsView.php?id=20190625005001&wlog_sub=svt_006"                           
-#> [26] "http://www.pressian.com/news/article/?no=246193"                                                        
-#> [27] "http://mbn.mk.co.kr/pages/news/newsView.php?ref=newsstand&news_seq_no=3870180&pos=20002_3"              
-#> [28] "http://www.dt.co.kr/contents.html?article_no=2019062402109932781002&naver=stand"                        
-#> [29] "https://www.nocutnews.co.kr/news/5171990"                                                               
-#> [30] "https://www.mk.co.kr/news/politics/view/2019/06/451795/"                                                
-#> [31] "https://www.ytn.co.kr/_ln/0103_201906241617041128_005"                                                  
-#> [32] "http://www.bloter.net/archives/343946"                                                                  
-#> [33] "http://news.mt.co.kr/mtview.php?no=2019062418127667075&cast=1&STAND=MTS_P"                              
-#> [34] "http://sports.donga.com/NewsStand/3/all/20190624/96150971/1"                                            
-#> [35] "http://www.newsis.com/view/?id=NISX20190624_0000690173&cid="                                            
-#> [36] "http://news.jtbc.joins.com/html/034/NB11838034.html"                                                    
-#> [37] "https://www.sisain.co.kr/?mod=news&act=articleView&idxno=34905"                                         
-#> [38] "http://www.mydaily.co.kr/new_yk/html/read.php?newsid=201906242319596580"                                
-#> [39] "http://www.munhwa.com/news/view.html?no=20190624MW145118207290&w=ns"                                    
-#> [40] "http://www.sportsseoul.com/news/read/780324"                                                            
-#> [41] "http://news.kbs.co.kr/news/view.do?ncd=4228349"                                                         
-#> [42] "http://www.etnews.com/20190624000311?mc=ns_003_00002"                                                   
-#> [43] "http://imnews.imbc.com/replay/2019/nwdesk/article/5377194_24634.html"                                   
-#> [44] "http://news.khan.co.kr/kh_news/khan_art_view.html?artid=201906252223015&code=910402"                    
-#> [45] "http://www.osen.co.kr/article/G1111170712"                                                              
-#> [46] "http://www.inews24.com/view/1180471"                                                                    
-#> [47] "https://www.hankyung.com/economy/article/2019062450291"
-
 target %>% 
   iwalk(
     ~ {print(.)
@@ -143,7 +94,7 @@ target %>%
 #> $ published_at <dttm> 2019-06-24 10:46:13
 #> $ edited_at    <dttm> NA
 #> $ by           <chr> NA
-#> [1] "http://isplus.live.joins.com/news/article/article.asp?total_id=23504743"
+#> [1] "http://isplus.live.joins.com/news/article/article.asp?total_id=23509904"
 #> [1] "http://www.mediatoday.co.kr/news/articleView.html?idxno=200760"
 #> Observations: 1
 #> Variables: 6

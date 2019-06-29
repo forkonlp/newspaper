@@ -10,18 +10,24 @@ finish <- function(dat, func) {
 }
 
 is_at <- function(x) stringr::str_detect(x, stringr::fixed("_at"))
+is_body <- function(x) stringr::str_detect(x, stringr::fixed("body_"))
 
-finish_basic <- function(x) stringr::str_squish(x[1])
+finish_basic <- function(x) {
+  x[1] %>%
+    remove_jscss() %>%
+    stringr::str_squish()
+}
 
 finish_at_basic <- function(x) {
   finish_basic(x) %>%
-    lubridate::ymd_hms(tz = "Asia/Seoul", quiet = T)
+    lubridate::ymd_hms(tz = "Asia/Seoul", quiet = T) %>%
+    purrr::when(
+      is.na(.) ~ lubridate::ymd_hm(., tz = "Asia/Seoul", quiet = T),
+      ~ .)
 }
 
 remove_jscss <- function(x) {
-  x %>%
-    remove_tag(c("script","style")) %>%
-    finish_basic()
+  remove_tag(x, c("script","style"))
 }
 
 remove_tag <- function(x, tar_nodes) {

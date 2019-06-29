@@ -50,8 +50,6 @@ np_news("http://1318virus.net/?p=1129") %>%
 library(tibble)
 library(purrr)
 
-print(target)
-
 target %>% 
   iwalk(
     ~ {print(.)

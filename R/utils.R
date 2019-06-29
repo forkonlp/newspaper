@@ -79,6 +79,7 @@ yml_start <- function(target_url, open = T){
 
   temp$name <- name
   temp$site <- site
+  temp$body$attr <- "pass"
 
   yaml::write_yaml(x = temp,
                    file = filename,

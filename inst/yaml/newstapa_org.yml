@@ -5,7 +5,7 @@ title:
   attr: .na
 body:
   node: div.post-content div.body
-  attr: .na
+  attr: pass
 from:
   node: meta[property="og:site_name"]
   attr: content

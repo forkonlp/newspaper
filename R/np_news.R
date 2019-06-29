@@ -6,7 +6,9 @@
 #' @importFrom purrr pmap
 #'
 #' @export
-np_news <- function(target_url, format = c("tibble", "list")){
+np_news <- function(target_url,
+                    format = c("tibble", "list"),
+                    edited = c("na","copy")){
 
   if (!is_url(target_url)) {
     stop("Is it valid url?")
