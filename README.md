@@ -30,14 +30,6 @@ This is a basic example which shows you how to solve a common problem:
 ``` r
 library(newspaper)
 library(dplyr)
-#> 
-#> Attaching package: 'dplyr'
-#> The following objects are masked from 'package:stats':
-#> 
-#>     filter, lag
-#> The following objects are masked from 'package:base':
-#> 
-#>     intersect, setdiff, setequal, union
 
 np_news("http://1318virus.net/?p=1129") %>% 
   glimpse()
@@ -110,8 +102,10 @@ target %>%
   iwalk(
     ~ {print(.)
       purrr::safely(np_news)(.x) %>% 
-      .$result %>% 
-      glimpse()}
+      purrr::when(
+        is.null(.$result) ~ invisible(.),
+        ~ .$result %>% glimpse()
+        )}
   )
 #> [1] "https://newstapa.org/44014"
 #> Observations: 1
@@ -130,7 +124,7 @@ target %>%
 #> $ from         <chr> "국민일보"
 #> $ published_at <dttm> 2019-06-23 18:57:00
 #> $ edited_at    <dttm> NA
-#> $ by           <chr> "NA"
+#> $ by           <chr> NA
 #> [1] "https://www.sedaily.com/NewsView/1VKJK15CHP"
 #> Observations: 1
 #> Variables: 6
@@ -141,9 +135,15 @@ target %>%
 #> $ edited_at    <dttm> NA
 #> $ by           <chr> "김창영 기자"
 #> [1] "http://sports.chosun.com/news/ntype5.htm?id=201906250100173480011943&ServiceDate=20190624"
-#>  NULL
+#> Observations: 1
+#> Variables: 6
+#> $ title        <chr> "[SC핫포커스]'성장통? DTD?' NC 급추락 어떻게 봐야하나"
+#> $ body         <chr> "◇스포츠조선DB [스포츠조선 박상경 기자]일시적 현상일까, 아니면 예고된 결과였을까.N...
+#> $ from         <chr> "스포츠조선"
+#> $ published_at <dttm> 2019-06-24 10:46:13
+#> $ edited_at    <dttm> NA
+#> $ by           <chr> NA
 #> [1] "http://isplus.live.joins.com/news/article/article.asp?total_id=23504743"
-#>  NULL
 #> [1] "http://www.mediatoday.co.kr/news/articleView.html?idxno=200760"
 #> Observations: 1
 #> Variables: 6
@@ -163,163 +163,43 @@ target %>%
 #> $ edited_at    <dttm> 2019-06-24 19:36:00
 #> $ by           <chr> "이윤정 기자"
 #> [1] "http://www.zdnet.co.kr/view/?no=20190624164954"
-#> Warning in file(file, "rt", encoding = fileEncoding): 파일("")은 오로지
-#> open = "w+"과 open = "w+b"만을 지원합니다: 전자의 것을 사용합니다
-#>  NULL
 #> [1] "https://www.hankyung.com/economy/article/2019062450611"
-#> Warning in file(file, "rt", encoding = fileEncoding): 파일("")은 오로지
-#> open = "w+"과 open = "w+b"만을 지원합니다: 전자의 것을 사용합니다
-#>  NULL
 #> [1] "http://www.segye.com/newsView/20190624511168"
-#> Warning in file(file, "rt", encoding = fileEncoding): 파일("")은 오로지
-#> open = "w+"과 open = "w+b"만을 지원합니다: 전자의 것을 사용합니다
-#>  NULL
 #> [1] "http://www.yonhapnewstv.co.kr/MYH20190624017300038/"
-#> Warning in file(file, "rt", encoding = fileEncoding): 파일("")은 오로지
-#> open = "w+"과 open = "w+b"만을 지원합니다: 전자의 것을 사용합니다
-#>  NULL
 #> [1] "http://www.fnnews.com/news/201906231503559480"
-#> Warning in file(file, "rt", encoding = fileEncoding): 파일("")은 오로지
-#> open = "w+"과 open = "w+b"만을 지원합니다: 전자의 것을 사용합니다
-#>  NULL
 #> [1] "http://www.sportalkorea.com/news/view.php?gisa_uniq=2019062413381708&key=&page=1&field=&section_code=10"
-#> Warning in file(file, "rt", encoding = fileEncoding): 파일("")은 오로지
-#> open = "w+"과 open = "w+b"만을 지원합니다: 전자의 것을 사용합니다
-#>  NULL
 #> [1] "http://www.donga.com/news/NewsStand/article/all/20190624/96160046/1"
-#> Warning in file(file, "rt", encoding = fileEncoding): 파일("")은 오로지
-#> open = "w+"과 open = "w+b"만을 지원합니다: 전자의 것을 사용합니다
-#>  NULL
 #> [1] "https://news.joins.com/article/23505282"
-#> Warning in file(file, "rt", encoding = fileEncoding): 파일("")은 오로지
-#> open = "w+"과 open = "w+b"만을 지원합니다: 전자의 것을 사용합니다
-#>  NULL
 #> [1] "https://www.hankookilbo.com/News/Read/201906242396749918?did=NS&dtype=2&dtypecode=9690&prnewsid="
-#> Warning in file(file, "rt", encoding = fileEncoding): 파일("")은 오로지
-#> open = "w+"과 open = "w+b"만을 지원합니다: 전자의 것을 사용합니다
-#>  NULL
 #> [1] "http://www.newdaily.co.kr/site/data/html/2019/06/24/2019062400170.html"
-#> Warning in file(file, "rt", encoding = fileEncoding): 파일("")은 오로지
-#> open = "w+"과 open = "w+b"만을 지원합니다: 전자의 것을 사용합니다
-#>  NULL
 #> [1] "https://news.sbs.co.kr/news/endPage.do?news_id=N1005323012&plink=STAND&cooper=NAVER"
-#> Warning in file(file, "rt", encoding = fileEncoding): 파일("")은 오로지
-#> open = "w+"과 open = "w+b"만을 지원합니다: 전자의 것을 사용합니다
-#>  NULL
 #> [1] "http://www.hani.co.kr/arti/society/society_general/899142.html?_ns=r2"
-#> Warning in file(file, "rt", encoding = fileEncoding): 파일("")은 오로지
-#> open = "w+"과 open = "w+b"만을 지원합니다: 전자의 것을 사용합니다
-#>  NULL
 #> [1] "http://www.dailian.co.kr/news/view/805409"
-#> Warning in file(file, "rt", encoding = fileEncoding): 파일("")은 오로지
-#> open = "w+"과 open = "w+b"만을 지원합니다: 전자의 것을 사용합니다
-#>  NULL
 #> [1] "http://news.chosun.com/site/data/html_dir/2019/06/24/2019062402306.html"
-#> Warning in file(file, "rt", encoding = fileEncoding): 파일("")은 오로지
-#> open = "w+"과 open = "w+b"만을 지원합니다: 전자의 것을 사용합니다
-#>  NULL
 #> [1] "http://news.heraldcorp.com/view.php?ud=20190624000010&nt=1&md=20190624071612_BL"
-#> Warning in file(file, "rt", encoding = fileEncoding): 파일("")은 오로지
-#> open = "w+"과 open = "w+b"만을 지원합니다: 전자의 것을 사용합니다
-#>  NULL
 #> [1] "https://view.asiae.co.kr/article/2019062420075833804"
-#> Warning in file(file, "rt", encoding = fileEncoding): 파일("")은 오로지
-#> open = "w+"과 open = "w+b"만을 지원합니다: 전자의 것을 사용합니다
-#>  NULL
 #> [1] "https://www.edaily.co.kr/news/read?newsId=03516166622525000&mediaCodeNo=257&OutLnkChk=Y"
-#> Warning in file(file, "rt", encoding = fileEncoding): 파일("")은 오로지
-#> open = "w+"과 open = "w+b"만을 지원합니다: 전자의 것을 사용합니다
-#>  NULL
 #> [1] "https://www.seoul.co.kr/news/newsView.php?id=20190625005001&wlog_sub=svt_006"
-#> Warning in file(file, "rt", encoding = fileEncoding): 파일("")은 오로지
-#> open = "w+"과 open = "w+b"만을 지원합니다: 전자의 것을 사용합니다
-#>  NULL
 #> [1] "http://www.pressian.com/news/article/?no=246193"
-#> Warning in file(file, "rt", encoding = fileEncoding): 파일("")은 오로지
-#> open = "w+"과 open = "w+b"만을 지원합니다: 전자의 것을 사용합니다
-#>  NULL
 #> [1] "http://mbn.mk.co.kr/pages/news/newsView.php?ref=newsstand&news_seq_no=3870180&pos=20002_3"
-#> Warning in file(file, "rt", encoding = fileEncoding): 파일("")은 오로지
-#> open = "w+"과 open = "w+b"만을 지원합니다: 전자의 것을 사용합니다
-#>  NULL
 #> [1] "http://www.dt.co.kr/contents.html?article_no=2019062402109932781002&naver=stand"
-#> Warning in file(file, "rt", encoding = fileEncoding): 파일("")은 오로지
-#> open = "w+"과 open = "w+b"만을 지원합니다: 전자의 것을 사용합니다
-#>  NULL
 #> [1] "https://www.nocutnews.co.kr/news/5171990"
-#> Warning in file(file, "rt", encoding = fileEncoding): 파일("")은 오로지
-#> open = "w+"과 open = "w+b"만을 지원합니다: 전자의 것을 사용합니다
-#>  NULL
 #> [1] "https://www.mk.co.kr/news/politics/view/2019/06/451795/"
-#> Warning in file(file, "rt", encoding = fileEncoding): 파일("")은 오로지
-#> open = "w+"과 open = "w+b"만을 지원합니다: 전자의 것을 사용합니다
-#>  NULL
 #> [1] "https://www.ytn.co.kr/_ln/0103_201906241617041128_005"
-#> Warning in file(file, "rt", encoding = fileEncoding): 파일("")은 오로지
-#> open = "w+"과 open = "w+b"만을 지원합니다: 전자의 것을 사용합니다
-#>  NULL
 #> [1] "http://www.bloter.net/archives/343946"
-#> Warning in file(file, "rt", encoding = fileEncoding): 파일("")은 오로지
-#> open = "w+"과 open = "w+b"만을 지원합니다: 전자의 것을 사용합니다
-#>  NULL
 #> [1] "http://news.mt.co.kr/mtview.php?no=2019062418127667075&cast=1&STAND=MTS_P"
-#> Warning in file(file, "rt", encoding = fileEncoding): 파일("")은 오로지
-#> open = "w+"과 open = "w+b"만을 지원합니다: 전자의 것을 사용합니다
-#>  NULL
 #> [1] "http://sports.donga.com/NewsStand/3/all/20190624/96150971/1"
-#> Warning in file(file, "rt", encoding = fileEncoding): 파일("")은 오로지
-#> open = "w+"과 open = "w+b"만을 지원합니다: 전자의 것을 사용합니다
-#>  NULL
 #> [1] "http://www.newsis.com/view/?id=NISX20190624_0000690173&cid="
-#> Warning in file(file, "rt", encoding = fileEncoding): 파일("")은 오로지
-#> open = "w+"과 open = "w+b"만을 지원합니다: 전자의 것을 사용합니다
-#>  NULL
 #> [1] "http://news.jtbc.joins.com/html/034/NB11838034.html"
-#> Warning in file(file, "rt", encoding = fileEncoding): 파일("")은 오로지
-#> open = "w+"과 open = "w+b"만을 지원합니다: 전자의 것을 사용합니다
-#>  NULL
 #> [1] "https://www.sisain.co.kr/?mod=news&act=articleView&idxno=34905"
-#> Warning in file(file, "rt", encoding = fileEncoding): 파일("")은 오로지
-#> open = "w+"과 open = "w+b"만을 지원합니다: 전자의 것을 사용합니다
-#>  NULL
 #> [1] "http://www.mydaily.co.kr/new_yk/html/read.php?newsid=201906242319596580"
-#> Warning in file(file, "rt", encoding = fileEncoding): 파일("")은 오로지
-#> open = "w+"과 open = "w+b"만을 지원합니다: 전자의 것을 사용합니다
-#>  NULL
 #> [1] "http://www.munhwa.com/news/view.html?no=20190624MW145118207290&w=ns"
-#> Warning in file(file, "rt", encoding = fileEncoding): 파일("")은 오로지
-#> open = "w+"과 open = "w+b"만을 지원합니다: 전자의 것을 사용합니다
-#>  NULL
 #> [1] "http://www.sportsseoul.com/news/read/780324"
-#> Warning in file(file, "rt", encoding = fileEncoding): 파일("")은 오로지
-#> open = "w+"과 open = "w+b"만을 지원합니다: 전자의 것을 사용합니다
-#>  NULL
 #> [1] "http://news.kbs.co.kr/news/view.do?ncd=4228349"
-#> Warning in file(file, "rt", encoding = fileEncoding): 파일("")은 오로지
-#> open = "w+"과 open = "w+b"만을 지원합니다: 전자의 것을 사용합니다
-#>  NULL
 #> [1] "http://www.etnews.com/20190624000311?mc=ns_003_00002"
-#> Warning in file(file, "rt", encoding = fileEncoding): 파일("")은 오로지
-#> open = "w+"과 open = "w+b"만을 지원합니다: 전자의 것을 사용합니다
-#>  NULL
 #> [1] "http://imnews.imbc.com/replay/2019/nwdesk/article/5377194_24634.html"
-#> Warning in file(file, "rt", encoding = fileEncoding): 파일("")은 오로지
-#> open = "w+"과 open = "w+b"만을 지원합니다: 전자의 것을 사용합니다
-#>  NULL
 #> [1] "http://news.khan.co.kr/kh_news/khan_art_view.html?artid=201906252223015&code=910402"
-#> Warning in file(file, "rt", encoding = fileEncoding): 파일("")은 오로지
-#> open = "w+"과 open = "w+b"만을 지원합니다: 전자의 것을 사용합니다
-#>  NULL
 #> [1] "http://www.osen.co.kr/article/G1111170712"
-#> Warning in file(file, "rt", encoding = fileEncoding): 파일("")은 오로지
-#> open = "w+"과 open = "w+b"만을 지원합니다: 전자의 것을 사용합니다
-#>  NULL
 #> [1] "http://www.inews24.com/view/1180471"
-#> Warning in file(file, "rt", encoding = fileEncoding): 파일("")은 오로지
-#> open = "w+"과 open = "w+b"만을 지원합니다: 전자의 것을 사용합니다
-#>  NULL
 #> [1] "https://www.hankyung.com/economy/article/2019062450291"
-#> Warning in file(file, "rt", encoding = fileEncoding): 파일("")은 오로지
-#> open = "w+"과 open = "w+b"만을 지원합니다: 전자의 것을 사용합니다
-#>  NULL
 ```

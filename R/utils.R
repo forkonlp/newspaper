@@ -94,5 +94,9 @@ get_config <- function(name){
   system.file("yaml",
               stringr::str_c(name, ".yml"),
               package = "newspaper") %>%
+    purrr::when(
+      . == "" ~ stop("There's no config file for this site yet."),
+      ~ .
+    ) %>%
     yaml::read_yaml()
 }

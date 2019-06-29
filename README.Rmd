@@ -35,7 +35,7 @@ remotes::install_github("forkonlp/newspaper")
 
 This is a basic example which shows you how to solve a common problem:
 
-```{r example}
+```{r example, message=F}
 library(newspaper)
 library(dplyr)
 
@@ -56,7 +56,9 @@ target %>%
   iwalk(
     ~ {print(.)
       purrr::safely(np_news)(.x) %>% 
-      .$result %>% 
-      glimpse()}
+      purrr::when(
+        is.null(.$result) ~ invisible(.),
+        ~ .$result %>% glimpse()
+        )}
   )
 ```

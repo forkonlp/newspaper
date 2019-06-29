@@ -3,5 +3,5 @@ read_sports_chosun_com <- function(x) {
 }
 
 body_sports_chosun_com <- function(x) {
-  remove_script(x)
+  remove_jscss(x)
 }
