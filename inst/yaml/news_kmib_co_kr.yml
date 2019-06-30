@@ -5,7 +5,7 @@ title:
   attr: .na
 body:
   node: div#articleBody
-  attr: .na
+  attr: pass
 from:
   node: meta[name="description"]
   attr: content

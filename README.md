@@ -36,7 +36,7 @@ np_news("http://1318virus.net/?p=1129") %>%
 #> Observations: 1
 #> Variables: 6
 #> $ title        <chr> "정치에서 소외되는 청년들 “군대 다녀와도 나이 때문에 피선거권이 없어요”"
-#> $ body         <chr> "“군대 다녀와도 나이 때문에 피선거권이 없어요” “정당 대표여도 나이 때문에 피선거권이...
+#> $ body         <chr> "“군대 다녀와도 나이 때문에 피선거권이 없어요” “정당 대표여도 나이 때문에 피선거권이 없…
 #> $ from         <chr> "인터넷뉴스 바이러스"
 #> $ published_at <dttm> 2018-04-18 23:02:43
 #> $ edited_at    <dttm> NA
@@ -62,16 +62,16 @@ target %>%
 #> Observations: 1
 #> Variables: 6
 #> $ title        <chr> "美대학인증기관 \"베데스다대학은 김성혜가 좌지우지...이사회 유명무실\""
-#> $ body         <chr> "美대학인증기관 ‘와스크(WASC)’ 베데스다대학 평가 보고서 입수“김성혜와 아들이 좌지...
+#> $ body         <chr> "美대학인증기관 ‘와스크(WASC)’ 베데스다대학 평가 보고서 입수“김성혜와 아들이 좌지우지…
 #> $ from         <chr> "한국탐사저널리즘센터 뉴스타파"
-#> $ published_at <dttm> 2018-12-27 18:23:00
+#> $ published_at <dttm> 2018-12-27 06:23:00
 #> $ edited_at    <dttm> NA
 #> $ by           <chr> "홍여진"
 #> [1] "http://news.kmib.co.kr/article/view.asp?arcid=0924085038&code=11121400&sid1=pol&cp=nv2"
 #> Observations: 1
 #> Variables: 6
 #> $ title        <chr> "김정은 “트럼프 친서 만족”, 미, 셈법 변화 밝혔나"
-#> $ body         <chr> "김정은 북한 국무위원장이 도널드 트럼프 미국 대통령이 보내온 친서를 읽고 있는 사진을 ...
+#> $ body         <chr> "김정은 북한 국무위원장이 도널드 트럼프 미국 대통령이 보내온 친서를 읽고 있는 사진을 노동…
 #> $ from         <chr> "국민일보"
 #> $ published_at <dttm> 2019-06-23 18:57:00
 #> $ edited_at    <dttm> NA
@@ -80,7 +80,7 @@ target %>%
 #> Observations: 1
 #> Variables: 6
 #> $ title        <chr> "'대선 주자 샌더스, 1,900조원 학자금 빚 탕감 법안 발의'"
-#> $ body         <chr> "버니 샌더스 미국 상원의원 /AFP연합뉴스2020년 미국 대선 주자로 꼽히는 진보주의자...
+#> $ body         <chr> "버니 샌더스 미국 상원의원 /AFP연합뉴스2020년 미국 대선 주자로 꼽히는 진보주의자 버…
 #> $ from         <chr> "서울경제"
 #> $ published_at <dttm> 2019-06-24 16:36:17
 #> $ edited_at    <dttm> NA
@@ -89,17 +89,25 @@ target %>%
 #> Observations: 1
 #> Variables: 6
 #> $ title        <chr> "[SC핫포커스]'성장통? DTD?' NC 급추락 어떻게 봐야하나"
-#> $ body         <chr> "◇스포츠조선DB [스포츠조선 박상경 기자]일시적 현상일까, 아니면 예고된 결과였을까.N...
+#> $ body         <chr> "◇스포츠조선DB [스포츠조선 박상경 기자]일시적 현상일까, 아니면 예고된 결과였을까.NC …
 #> $ from         <chr> "스포츠조선"
 #> $ published_at <dttm> 2019-06-24 10:46:13
 #> $ edited_at    <dttm> NA
 #> $ by           <chr> NA
 #> [1] "http://isplus.live.joins.com/news/article/article.asp?total_id=23509904"
+#> Observations: 1
+#> Variables: 6
+#> $ title        <chr> "추신수, 희생플라이로 1타점 추가…타율 0.285"
+#> $ body         <chr> "텍사스 추신수(37)가 희생플라이로 타점을 올렸다.추신수는 28일(한국시간) 코메리카파크에…
+#> $ from         <chr> "일간스포츠"
+#> $ published_at <dttm> 2019-06-30 01:46:07
+#> $ edited_at    <dttm> NA
+#> $ by           <chr> NA
 #> [1] "http://www.mediatoday.co.kr/news/articleView.html?idxno=200760"
 #> Observations: 1
 #> Variables: 6
 #> $ title        <chr> "조선일보 ‘직장 내 괴롭힘 금지’ 사규 조항 신설"
-#> $ body         <chr> "직장 내 괴롭힘 금지 조항이 신설된 개정 근로기준법이 오는 7월16일 시행되는 가운데 ...
+#> $ body         <chr> "직장 내 괴롭힘 금지 조항이 신설된 개정 근로기준법이 오는 7월16일 시행되는 가운데 조선…
 #> $ from         <chr> "미디어오늘"
 #> $ published_at <dttm> 2019-06-24 17:08:00
 #> $ edited_at    <dttm> NA
@@ -108,14 +116,38 @@ target %>%
 #> Observations: 1
 #> Variables: 6
 #> $ title        <chr> "카카오뱅크 대주주 적격성 심사 '파란불'"
-#> $ body         <chr> "김범수 카카오 이사회 의장이 금융위원회의 카카오뱅크 대주주 적격성 심사 대상에 해당하지...
+#> $ body         <chr> "김범수 카카오 이사회 의장이 금융위원회의 카카오뱅크 대주주 적격성 심사 대상에 해당하지 않…
 #> $ from         <chr> "조선비즈"
 #> $ published_at <dttm> 2019-06-24 19:20:00
 #> $ edited_at    <dttm> 2019-06-24 19:36:00
 #> $ by           <chr> "이윤정 기자"
 #> [1] "http://www.zdnet.co.kr/view/?no=20190624164954"
+#> Observations: 1
+#> Variables: 6
+#> $ title        <chr> "네이버, 관심사 기반 SNS '폴라' 접는다"
+#> $ body         <chr> "네이버가 지난 2015년 선보인 관심사 기반 소셜네트워크서비스(SNS) '폴라' 서비스를 …
+#> $ from         <chr> "ZDNet Korea"
+#> $ published_at <dttm> 2019-06-24 17:31:00
+#> $ edited_at    <dttm> NA
+#> $ by           <chr> "안희정 기자"
 #> [1] "https://www.hankyung.com/economy/article/2019062450611"
+#> Observations: 1
+#> Variables: 6
+#> $ title        <chr> "[단독] 노후 휘발유車도 교체때 개소세 70% 깎아준다"
+#> $ body         <chr> "사진=연합뉴스 정부가 연료 종류와 상관없이 노후자동차 교체 때 개별소비세를 70%까지 깎아…
+#> $ from         <chr> "한국경제"
+#> $ published_at <dttm> 2019-06-24 17:33:00
+#> $ edited_at    <dttm> NA
+#> $ by           <chr> "서민준/도병욱"
 #> [1] "http://www.segye.com/newsView/20190624511168"
+#> Observations: 1
+#> Variables: 6
+#> $ title        <chr> "민노총, 文정부와 전쟁 선포… \"도 넘었다\" 여론 냉담"
+#> $ body         <chr> "국회 앞 집회에서 차단벽을 부수고 경찰을 폭행하는 등 불법행위를 주도한 혐의로 구속영장이 …
+#> $ from         <chr> "세계일보"
+#> $ published_at <dttm> 2019-06-24 19:58:31
+#> $ edited_at    <dttm> 2019-06-24 22:11:38
+#> $ by           <chr> "김승환"
 #> [1] "http://www.yonhapnewstv.co.kr/MYH20190624017300038/"
 #> [1] "http://www.fnnews.com/news/201906231503559480"
 #> [1] "http://www.sportalkorea.com/news/view.php?gisa_uniq=2019062413381708&key=&page=1&field=&section_code=10"
@@ -153,4 +185,12 @@ target %>%
 #> [1] "http://www.osen.co.kr/article/G1111170712"
 #> [1] "http://www.inews24.com/view/1180471"
 #> [1] "https://www.hankyung.com/economy/article/2019062450291"
+#> Observations: 1
+#> Variables: 6
+#> $ title        <chr> "이재용 삼성전자 부회장 \"中東 미래사업 공략…발 빠르게 움직이자\""
+#> $ body         <chr> "이재용 삼성전자 부회장이 경영 보폭을 넓히고 있다. 삼성전자 등 전자 계열사에 이어 24일…
+#> $ from         <chr> "한국경제"
+#> $ published_at <dttm> 2019-06-24 17:51:00
+#> $ edited_at    <dttm> NA
+#> $ by           <chr> "황정수/고재연"
 ```

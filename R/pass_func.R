@@ -1,9 +1,11 @@
 finish <- function(dat, func) {
   finish_func <- try(match.fun(func), silent = T)
-  if (is.function(finish_func)){
+  if (is.function(finish_func)) {
     finish_func(dat)
   } else if (is_at(func)) {
     finish_at_basic(dat)
+  } else if (is_body(func)) {
+    finish_body_basic(dat)
   } else {
     finish_basic(dat)
   }
@@ -12,17 +14,23 @@ finish <- function(dat, func) {
 is_at <- function(x) stringr::str_detect(x, stringr::fixed("_at"))
 is_body <- function(x) stringr::str_detect(x, stringr::fixed("body_"))
 
-finish_basic <- function(x) {
+finish_basic <- function(x) { stringr::str_squish(x[1])}
+
+finish_body_basic <- function(x) {
   x[1] %>%
+    purrr::when(
+      identical(., character(0)) ~ return(.),
+      ~ .
+    ) %>%
     remove_jscss() %>%
-    stringr::str_squish()
+    finish_basic()
 }
 
 finish_at_basic <- function(x) {
   finish_basic(x) %>%
     lubridate::ymd_hms(tz = "Asia/Seoul", quiet = T) %>%
     purrr::when(
-      is.na(.) ~ lubridate::ymd_hm(., tz = "Asia/Seoul", quiet = T),
+      is.na(.) ~ lubridate::ymd_hm(finish_basic(x), tz = "Asia/Seoul", quiet = T),
       ~ .)
 }
 
@@ -30,16 +38,21 @@ remove_jscss <- function(x) {
   remove_tag(x, c("script","style"))
 }
 
+#' @export
 remove_tag <- function(x, tar_nodes) {
-  tar_nodes <- str_c(tar_nodes, collapse = ", ")
+  tar_nodes <- stringr::str_c(tar_nodes, collapse = ", ")
   x %>%
     rvest::html_nodes(tar_nodes) %>%
     rvest::html_text() %>%
-    .[nchar(.)>0] -> tar_remove
+    .[nchar(.) > 0] -> tar_remove
+
+  if (identical(tar_remove, character(0))) {
+    return(rvest::html_text(x))
+  }
 
   rvest::html_text(x) -> texts
 
-  for(i in 1:length(tar_remove)){
+  for (i in 1:length(tar_remove)) {
     texts <- stringr::str_remove_all(texts, stringr::fixed(tar_remove[i]))
   }
   return(texts)

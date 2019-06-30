@@ -5,7 +5,7 @@ title:
   attr: .na
 body:
   node: div#article_content div
-  attr: .na
+  attr: pass
 from:
   node: meta[property="dable:author"]
   attr: content

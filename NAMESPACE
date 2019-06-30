@@ -3,6 +3,7 @@
 export("%>%")
 export(get_config)
 export(np_news)
+export(remove_tag)
 export(url_to_name)
 export(yml_start)
 import(dplyr)
