@@ -22,7 +22,8 @@ Imports:
     purrr,
     xml2,
     rvest,
-    urltools
+    urltools,
+    httr
 Suggests: 
     testthat (>= 2.1.0),
     covr
