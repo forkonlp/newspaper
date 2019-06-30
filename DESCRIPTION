@@ -20,10 +20,9 @@ Imports:
     dplyr,
     stringr,
     purrr,
-    rvest,
-    urltools,
     xml2,
-    zeallot
+    rvest,
+    urltools
 Suggests: 
     testthat (>= 2.1.0),
     covr

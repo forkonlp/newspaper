@@ -18,11 +18,13 @@ np_news <- function(target_url,
 
   config <- get_config(name)
 
-  c(conditions, error) %<-% newspaper:::support_info(name, config)
+  conditions <- newspaper:::support_info(name, config)
 
-  if (error) {
+  if (conditions$error) {
     stop("This site is on the list but can't get information.")
   }
+
+  conditions <- conditions$content
 
   hobj <- newspaper:::read(stringr::str_c("read_", name))(target_url)
 

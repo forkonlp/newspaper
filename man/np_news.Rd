@@ -4,7 +4,8 @@
 \alias{np_news}
 \title{Get News contents}
 \usage{
-np_news(target_url, format = c("tibble", "list"))
+np_news(target_url, format = c("tibble", "list"), edited = c("na",
+  "copy"))
 }
 \arguments{
 \item{target_url}{target url}
