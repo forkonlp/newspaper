@@ -60,7 +60,6 @@ np_info <- function(hobj,
   hobj %>%
     rvest::html_nodes(node) %>%
     purrr::when(
-      length(.) == 0 ~ NA_character_,
       attr == "pass" ~ .,
       attr != "NA" ~ rvest::html_attr(., attr),
       attr == "NA" ~ rvest::html_text(.)

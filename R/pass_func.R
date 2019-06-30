@@ -17,9 +17,10 @@ is_body <- function(x) stringr::str_detect(x, stringr::fixed("body_"))
 finish_basic <- function(x) { stringr::str_squish(x[1])}
 
 finish_body_basic <- function(x) {
-  x[1] %>%
+  x %>%
     purrr::when(
       identical(., character(0)) ~ return(.),
+      is.na(x) ~ return(NA_character_),
       ~ .
     ) %>%
     remove_jscss() %>%
