@@ -1,0 +1,20 @@
+name: donga_com
+site: http://www.donga.com
+title:
+  node: h1.title
+  attr: .na
+body:
+  node: div.article_txt
+  attr: pass
+from:
+  node: meta[name="writer"]
+  attr: content
+published_at:
+  node: meta[property="article:published_time"]
+  attr: content
+edited_at:
+  node: div.title_foot span.date01
+  attr: .na
+by:
+  node: meta[property="dable:author"]
+  attr: content

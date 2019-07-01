@@ -51,6 +51,12 @@ tibbler <- function(condition_list) {
     dplyr::select(where[where %in% names(.)])
 }
 
+#' @export
+np_n <- function(x){
+  np_news(x) %>%
+    dplyr::glimpse()
+}
+
 #' @importFrom rvest html_nodes html_text html_attr
 #' @importFrom purrr when
 np_info <- function(hobj,

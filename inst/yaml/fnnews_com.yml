@@ -1,0 +1,20 @@
+name: fnnews_com
+site: http://www.fnnews.com
+title:
+  node: div.article_head h1.mg
+  attr: .na
+body:
+  node: div#article_content
+  attr: pass
+from:
+  node: title
+  attr: .na
+published_at:
+  node: div.byline em
+  attr: .na
+edited_at:
+  node: div.byline em
+  attr: .na
+by:
+  node: span#customByline
+  attr: .na

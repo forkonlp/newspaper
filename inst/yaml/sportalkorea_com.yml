@@ -1,0 +1,20 @@
+name: sportalkorea_com
+site: http://www.sportalkorea.com
+title:
+  node: div#reView h2
+  attr: .na
+body:
+  node: div[itemprop="articleBody"] div.review_text02
+  attr: pass
+from:
+  node: meta[property="og:site_name"]
+  attr: content
+published_at:
+  node: meta[property="article:published_time"]
+  attr: content
+edited_at:
+  node: .na
+  attr: .na
+by:
+  node: meta[property="dable:author"]
+  attr: content
