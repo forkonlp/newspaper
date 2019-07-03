@@ -11,18 +11,21 @@ finish <- function(dat, func) {
   }
 }
 
-is_at <- function(x) stringr::str_detect(x, stringr::fixed("_at"))
-is_body <- function(x) stringr::str_detect(x, stringr::fixed("body_"))
+is_at <- function(x)
+  stringr::str_detect(x, stringr::fixed("_at"))
+is_body <-
+  function(x)
+    stringr::str_detect(x, stringr::fixed("body_"))
 
-finish_basic <- function(x) { stringr::str_squish(x[1])}
+finish_basic <- function(x) {
+  stringr::str_squish(x[1])
+}
 
 finish_body_basic <- function(x) {
   x %>%
-    purrr::when(
-      identical(., character(0)) ~ return(.),
-      is.na(x) ~ return(NA_character_),
-      ~ .
-    ) %>%
+    purrr::when(identical(., character(0)) ~ return(.),
+                is.na(x) ~ return(NA_character_),
+                ~ .) %>%
     remove_jscss() %>%
     finish_basic()
 }
@@ -30,13 +33,12 @@ finish_body_basic <- function(x) {
 finish_at_basic <- function(x) {
   finish_basic(x) %>%
     lubridate::ymd_hms(tz = "Asia/Seoul", quiet = T) %>%
-    purrr::when(
-      is.na(.) ~ lubridate::ymd_hm(finish_basic(x), tz = "Asia/Seoul", quiet = T),
-      ~ .)
+    purrr::when(is.na(.) ~ lubridate::ymd_hm(finish_basic(x), tz = "Asia/Seoul", quiet = T),
+                ~ .)
 }
 
 remove_jscss <- function(x) {
-  remove_tag(x, c("script","style"))
+  remove_tag(x, c("script", "style"))
 }
 
 #' @export
@@ -54,7 +56,8 @@ remove_tag <- function(x, tar_nodes) {
   rvest::html_text(x) -> texts
 
   for (i in 1:length(tar_remove)) {
-    texts <- stringr::str_remove_all(texts, stringr::fixed(tar_remove[i]))
+    texts <-
+      stringr::str_remove_all(texts, stringr::fixed(tar_remove[i]))
   }
   return(texts)
 }
@@ -62,7 +65,30 @@ remove_tag <- function(x, tar_nodes) {
 
 read <- function(func) {
   read_func <- try(match.fun(func), silent = T)
-  if (is.function(read_func)) { read_func } else { read_basic }
+  if (is.function(read_func)) {
+    read_func
+  } else {
+    read_basic
+  }
 }
 
-read_basic <- function(x) xml2::read_html(x, encoding = 'UTF-8')
+read_html_safe <- purrr::possibly(xml2::read_html, otherwise = NULL)
+
+read_basic <- function(x, encoding = "utf-8") {
+  read_html_safe(x) -> hobj
+  if (!is.null(hobj)) {
+    return(hobj)
+  }
+
+  read_html_safe(x, encoding = "euc-kr") -> hobj
+  if (!is.null(hobj)) {
+    return(hobj)
+  }
+  suppressWarnings(
+    httr::GET(x) %>%
+      httr::content("raw") %>%
+      rawToChar() %>%
+      stringr::str_conv(., encoding = encoding) %>%
+      xml2::read_html()
+  )
+}

@@ -51,8 +51,7 @@ tibbler <- function(condition_list) {
     dplyr::select(where[where %in% names(.)])
 }
 
-#' @export
-np_n <- function(x){
+np <- function(x){
   np_news(x) %>%
     dplyr::glimpse()
 }

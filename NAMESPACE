@@ -2,7 +2,6 @@
 
 export("%>%")
 export(get_config)
-export(np_n)
 export(np_news)
 export(remove_tag)
 export(url_to_name)
