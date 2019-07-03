@@ -1,11 +1,11 @@
-name: sports_chosun_com
-site: http://sports.chosun.com/
-encoding: utf-8
+name: news_joins_com
+site: https://news.joins.com
+encoding: utf8
 title:
-  node: h3.article-title
+  node: h1#article_title
   attr: .na
 body:
-  node: font.article
+  node: div#article_body
   attr: pass
 from:
   node: meta[property="og:site_name"]
@@ -17,5 +17,5 @@ edited_at:
   node: .na
   attr: .na
 by:
-  node: .na
-  attr: .na
+  node: meta[property="dable:author"]
+  attr: content

@@ -1,5 +1,6 @@
 name: ablenews_co_kr
 site: http://www.ablenews.co.kr/
+encoding: utf-8
 title:
   node: h3.NewsTitleBox
   attr: .na

@@ -1,5 +1,6 @@
 name: aflnews_co_kr
 site: http://www.aflnews.co.kr/
+encoding: utf-8
 title:
   node: div.headline h3
   attr: .na

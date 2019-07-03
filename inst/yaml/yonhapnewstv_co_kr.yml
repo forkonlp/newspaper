@@ -1,5 +1,6 @@
 name: yonhapnewstv_co_kr
 site: http://www.yonhapnewstv.co.kr
+encoding: utf-8
 title:
   node: h1#title
   attr: .na

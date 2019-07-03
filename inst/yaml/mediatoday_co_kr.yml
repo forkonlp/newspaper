@@ -1,5 +1,6 @@
 name: mediatoday_co_kr
 site: http://www.mediatoday.co.kr
+encoding: utf-8
 title:
   node: div.article-head-title
   attr: .na

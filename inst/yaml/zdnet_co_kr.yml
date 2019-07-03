@@ -1,5 +1,6 @@
 name: zdnet_co_kr
 site: http://www.zdnet.co.kr
+encoding: utf-8
 title:
   node: div.news_head h1
   attr: .na

@@ -1,5 +1,6 @@
 name: sportalkorea_com
 site: http://www.sportalkorea.com
+encoding: euc-kr
 title:
   node: div#reView h2
   attr: .na

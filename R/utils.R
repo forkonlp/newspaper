@@ -18,14 +18,18 @@ url_to_name <- function(target_url) {
     stringr::str_replace_all("[^a-zA-Z0-9]", "_")
 }
 
-support_info <- function(name_, config) {
+support_info <- function(config) {
   config %>%
-    .[3:8] %>%
+    .[4:9] %>%
     dplyr::as_tibble() %>%
     dplyr::mutate_all(as.character) %>%
     list(content = .,
          error = all(is.na(.))) %>%
     return()
+}
+
+encoding_info <- function(config){
+  config$encoding
 }
 
 content_for_use <- function(x) {
@@ -79,6 +83,7 @@ yml_start <- function(target_url, open = T){
 
   temp$name <- name
   temp$site <- site
+  temp$encoding <- get_encoding(target_url)
   temp$body$attr <- "pass"
 
   yaml::write_yaml(x = temp,
@@ -100,4 +105,20 @@ get_config <- function(name){
       ~ .
     ) %>%
     yaml::read_yaml()
+}
+
+
+get_encoding <- function(target_url) {
+  target_url %>% httr::GET() %>%
+    httr::content("raw") %>%
+    rawToChar() %>%
+    stringr::str_remove_all("[^a-zA-Z0-9]") %>%
+    tolower() %>%
+    stringr::str_extract_all("utf8|euckr") %>%
+    .[[1]] %>% unique() %>%
+    purrr::when(
+      identical(., character(0)) ~ NA,
+      length(.) != 1 ~ NA,
+      ~ .
+    )
 }

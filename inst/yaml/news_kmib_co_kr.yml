@@ -1,5 +1,6 @@
 name: news_kmib_co_kr
 site: http://news.kmib.co.kr/
+encoding: utf-8
 title:
   node: div.nwsti h3
   attr: .na

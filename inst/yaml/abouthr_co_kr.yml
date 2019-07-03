@@ -1,5 +1,6 @@
 name: abouthr_co_kr
 site: http://www.abouthr.co.kr/
+encoding: utf-8
 title:
   node: span.headline-title
   attr: .na

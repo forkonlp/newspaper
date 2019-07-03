@@ -1,5 +1,6 @@
 name: 1318virus_net
 site: http://1318virus.net/
+encoding: utf-8
 title:
   node: h1.entry-title a
   attr: .na

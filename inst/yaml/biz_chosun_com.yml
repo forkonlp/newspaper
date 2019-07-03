@@ -1,5 +1,6 @@
 name: biz_chosun_com
 site: http://biz.chosun.com
+encoding: utf-8
 title:
   node: h1#news_title_text_id
   attr: .na

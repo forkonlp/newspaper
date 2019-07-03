@@ -1,5 +1,6 @@
 name: fnnews_com
 site: http://www.fnnews.com
+encoding: utf-8
 title:
   node: div.article_head h1.mg
   attr: .na

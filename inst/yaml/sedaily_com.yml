@@ -1,5 +1,6 @@
 name: sedaily_com
 site: https://www.sedaily.com/
+encoding: utf-8
 title:
   node: meta[name="title"]
   attr: content

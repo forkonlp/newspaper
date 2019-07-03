@@ -1,5 +1,6 @@
 name: 
 site: 
+encoding:
 title:
   node: .na
   attr: .na
