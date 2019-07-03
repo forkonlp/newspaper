@@ -41,7 +41,11 @@ remove_jscss <- function(x) {
   remove_tag(x, c("script", "style"))
 }
 
-#' @export
+select_tag <- function(x, tar_nodes) {
+  tar_nodes <- stringr::str_c(tar_nodes, collapse = ", ")
+    rvest::html_nodes(x, tar_nodes)
+}
+
 remove_tag <- function(x, tar_nodes) {
   tar_nodes <- stringr::str_c(tar_nodes, collapse = ", ")
   x %>%

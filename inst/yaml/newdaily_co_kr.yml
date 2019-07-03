@@ -1,0 +1,21 @@
+name: newdaily_co_kr
+site: http://www.newdaily.co.kr
+encoding: utf8
+title:
+  node: meta[property="og:title"]
+  attr: content
+body:
+  node: section.nd-news-body
+  attr: pass
+from:
+  node: meta[property="og:site_name"]
+  attr: content
+published_at:
+  node: span[class="nd-news-info-date"]
+  attr: .na
+edited_at:
+  node: .na
+  attr: .na
+by:
+  node: div.nd-news-writer
+  attr: pass

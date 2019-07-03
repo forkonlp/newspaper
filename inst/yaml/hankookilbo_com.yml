@@ -1,0 +1,21 @@
+name: hankookilbo_com
+site: https://www.hankookilbo.com
+encoding: utf8
+title:
+  node: meta[name="title"]
+  attr: content
+body:
+  node: div.article-story
+  attr: pass
+from:
+  node: meta[property="og:site_name"]
+  attr: content
+published_at:
+  node: meta[property="article:published_time"]
+  attr: content
+edited_at:
+  node: .na
+  attr: .na
+by:
+  node: meta[name="hk:nw_jname"]
+  attr: content
