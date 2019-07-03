@@ -1,0 +1,21 @@
+name: dailian_co_kr
+site: http://www.dailian.co.kr
+encoding: utf8
+title:
+  node: meta[property="og:title"]
+  attr: content
+body:
+  node: div#view_page div#view_con
+  attr: pass
+from:
+  node: meta[property="og:site_name"]
+  attr: content
+published_at:
+  node: meta[property="article:published_time"]
+  attr: content
+edited_at:
+  node: .na
+  attr: .na
+by:
+  node: div.view_reporter_2017
+  attr: pass

@@ -1,0 +1,21 @@
+name: news_sbs_co_kr
+site: https://news.sbs.co.kr
+encoding: utf8
+title:
+  node: title
+  attr: .na
+body:
+  node: div.main_text div.text_area
+  attr: pass
+from:
+  node: meta[name="twitter:app:name:iphone"]
+  attr: content
+published_at:
+  node: meta[property="article:published_time"]
+  attr: content
+edited_at:
+  node: meta[property="article:modified_time"]
+  attr: content
+by:
+  node: meta[name="dable:author"]
+  attr: content

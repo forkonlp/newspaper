@@ -1,0 +1,21 @@
+name: hani_co_kr
+site: http://www.hani.co.kr
+encoding: utf8
+title:
+  node: meta[property="og:title"]
+  attr: content
+body:
+  node: div.article-text div div.text
+  attr: pass
+from:
+  node: h1.logo a
+  attr: title
+published_at:
+  node: p.date-time span
+  attr: .na
+edited_at:
+  node: p.date-time span
+  attr: .na
+by:
+  node: meta[property="dable:author"]
+  attr: content
