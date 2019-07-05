@@ -1,0 +1,36 @@
+test_that("newstapa_org", {
+  tem <- np_news(target[1])
+
+  expect_type(tem$title, "character")
+  expect_gt(nchar(tem$title), 10)
+  expect_type(tem$body, "character")
+  expect_gt(nchar(tem$body), 30)
+  expect_type(tem$from, "character")
+  expect_gt(nchar(tem$from), 3)
+  expect_type(tem$published_at, "double")
+  expect_s3_class(tem$published_at, "POSIXct")
+  expect_type(tem$edited_at, "double")
+  expect_s3_class(tem$edited_at, "POSIXct")
+  expect_true(is.na(tem$edited_at))
+  expect_type(tem$by, "character")
+  expect_gt(nchar(tem$by), 2)
+})
+
+
+test_that("news_kmib_co_kr", {
+  tem <- np_news(target[2])
+
+  expect_type(tem$title, "character")
+  expect_gt(nchar(tem$title), 10)
+  expect_type(tem$body, "character")
+  expect_gt(nchar(tem$body), 30)
+  expect_type(tem$from, "character")
+  expect_gt(nchar(tem$from), 3)
+  expect_type(tem$published_at, "double")
+  expect_s3_class(tem$published_at, "POSIXct")
+  expect_type(tem$edited_at, "double")
+  expect_s3_class(tem$edited_at, "POSIXct")
+  expect_true(is.na(tem$edited_at))
+  expect_type(tem$by, "character")
+  expect_true(is.na(tem$by))
+})
