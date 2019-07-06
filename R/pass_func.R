@@ -78,6 +78,16 @@ read <- function(func) {
 
 read_html_safe <- purrr::possibly(xml2::read_html, otherwise = NULL)
 
+read_with_agent <- function(x, encoding) {
+  ah <- httr::add_headers("User-Agent"="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36")
+  httr::GET(x, ah) %>%
+    httr::content()
+}
+
+read_with_agent_safe <- purrr::possibly(read_with_agent, otherwise = NULL)
+
+
+
 read_basic <- function(x, encoding = "utf-8") {
   read_html_safe(x) -> hobj
   if (!is.null(hobj)) {
@@ -88,6 +98,12 @@ read_basic <- function(x, encoding = "utf-8") {
   if (!is.null(hobj)) {
     return(hobj)
   }
+
+  read_with_agent_safe(x, encoding = encoding) -> hobj
+  if (!is.null(hobj)) {
+    return(hobj)
+  }
+
   suppressWarnings(
     httr::GET(x) %>%
       httr::content("raw") %>%

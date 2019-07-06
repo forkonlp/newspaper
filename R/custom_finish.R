@@ -191,3 +191,28 @@ body_biz_chosun_com <- function(x) {
 }
 
 
+from_news_chosun_com <- function(x) {
+  stringr::str_split(x, stringr::fixed(",")) %>%
+    .[[1]] %>% .[1] %>%
+    stringr::str_squish()
+}
+
+edited_at_news_chosun_com <- function(x) {
+  stringr::str_split(x, stringr::fixed("|")) %>%
+    .[[1]] %>% .[2] %>%
+    stringr::str_squish() %>%
+    lubridate::ymd_hm(tz = "Asia/Seoul", quiet = T)
+}
+
+body_news_chosun_com <- function(x) {
+  tar_rm <- c("div.news_date",
+              "h3.news_subtitle",
+              "div.news_like",
+              "div.news_rel",
+              "div.news_copyright",
+              "script",
+              "style")
+  x %>%
+    remove_tag(tar_rm) %>%
+    finish_basic()
+}

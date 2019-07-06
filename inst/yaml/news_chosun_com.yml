@@ -5,7 +5,7 @@ title:
   node: meta[name="title"]
   attr: content
 body:
-  node: .na
+  node: div#news_body_id
   attr: pass
 from:
   node: meta[name="news_keywords"]
