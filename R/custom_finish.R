@@ -218,6 +218,22 @@ body_news_chosun_com <- function(x) {
 }
 
 body_news_heraldcorp_com <- function(x) {
-    remove_tag(x, "table") %>%
+  remove_tag(x, "table") %>%
     finish_basic()
+}
+
+edited_at_view_asiae_co_kr <- function(x) {
+  stringr::str_split(x, stringr::fixed("\n")) %>%
+    .[[1]] -> tem
+  tem[2] %>%
+    stringr::str_squish() %>%
+    lubridate::ymd_hm(tz = "Asia/Seoul", quiet = T) -> cand1
+  tem[3] %>%
+    stringr::str_squish() %>%
+    lubridate::ymd_hm(tz = "Asia/Seoul", quiet = T) -> cand2
+  if (cand1 == cand2){
+    return(lubridate::as_datetime(NA))
+  } else {
+    return(cand1)
+  }
 }

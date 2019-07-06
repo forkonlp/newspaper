@@ -1,0 +1,21 @@
+name: view_asiae_co_kr
+site: https://view.asiae.co.kr
+encoding: utf8
+title:
+  node: meta[property="og:title"]
+  attr: content
+body:
+  node: .na
+  attr: pass
+from:
+  node: meta[property="og:site_name"]
+  attr: content
+published_at:
+  node: meta[property="article:published_time"]
+  attr: content
+edited_at:
+  node: p[class="user_data"]
+  attr: .na
+by:
+  node: .na
+  attr: .na
