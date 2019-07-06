@@ -27,12 +27,12 @@ np_news <- function(target_url,
 
   conditions <- conditions$content
 
-  hobj <- newspaper:::read(stringr::str_c("read_", name))(target_url, encoding)
+  hobj <- read(stringr::str_c("read_", name))(target_url, encoding)
 
   format <- match.arg(format)
 
   conditions %>%
-    newspaper:::content_for_use() %>%
+    content_for_use() %>%
     dplyr::mutate(prep = stringr::str_c(where,"_",config$name)) %>%
     purrr::pmap(function(site, where, node, attr, prep) {
       list(col = where, value = np_info(hobj, node, attr, prep))
@@ -45,6 +45,7 @@ np_news <- function(target_url,
 #' @importFrom purrr map_dfc
 #' @importFrom dplyr select
 tibbler <- function(condition_list) {
+  . <- NULL
   condition_list %>%
     purrr::map_dfc(
       ~ tibble::tibble(!!.x$col := .x$value)

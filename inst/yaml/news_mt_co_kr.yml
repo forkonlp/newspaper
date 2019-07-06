@@ -1,0 +1,21 @@
+name: news_mt_co_kr
+site: http://news.mt.co.kr
+encoding: .na
+title:
+  node: h1.subject
+  attr: .na
+body:
+  node: div.view_text div#textBody
+  attr: pass
+from:
+  node: meta[name="writer"]
+  attr: content
+published_at:
+  node: meta[property="article:published_time"]
+  attr: content
+edited_at:
+  node: .na
+  attr: .na
+by:
+  node: meta[property="dable:author"]
+  attr: content

@@ -1,0 +1,21 @@
+name: nocutnews_co_kr
+site: https://www.nocutnews.co.kr
+encoding: utf8
+title:
+  node: div.h_info h2
+  attr: .na
+body:
+  node: div[itemprop="articleBody"]
+  attr: pass
+from:
+  node: title
+  attr: .na
+published_at:
+  node: meta[name="article:published_time"]
+  attr: content
+edited_at:
+  node: .na
+  attr: .na
+by:
+  node: meta[name="dable:author"]
+  attr: content

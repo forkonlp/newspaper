@@ -10,6 +10,9 @@ chk_list <- function(name_){
     return()
 }
 
+
+#' @importFrom urltools domain
+#' @import stringr
 #' @export
 url_to_name <- function(target_url) {
   target_url %>%
@@ -18,6 +21,7 @@ url_to_name <- function(target_url) {
     stringr::str_replace_all("[^a-zA-Z0-9]", "_")
 }
 
+#' @import dplyr
 support_info <- function(config) {
   config %>%
     .[4:9] %>%
@@ -32,8 +36,10 @@ encoding_info <- function(config){
   config$encoding
 }
 
+#' @import dplyr
+#' @import tidyr
 content_for_use <- function(x) {
-  dplyr::mutate(x, rowid = c("node","attr")) %>%
+  dplyr::mutate(x, rowid = c("node", "attr")) %>%
     tidyr::gather(where, value, -rowid) %>%
     tidyr::spread(rowid, value) %>%
     dplyr::select(where, node, attr) %>%
@@ -65,13 +71,15 @@ yml_template <- function(){
 #' @importFrom stringr str_c
 #' @importFrom urltools scheme domain
 #' @importFrom httr GET
+#' @importFrom rstudioapi navigateToFile
+#' @importFrom utils browseURL
 #'
 #' @export
 yml_start <- function(target_url, open = T){
 
   yml_template() -> temp
 
-  newspaper:::url_to_name(target_url) -> name
+  url_to_name(target_url) -> name
 
   filename <- str_c("./inst/yaml/" ,name, ".yml")
 
@@ -91,8 +99,9 @@ yml_start <- function(target_url, open = T){
                    fileEncoding = "UTF-8")
   if (open & interactive()) {
     rstudioapi::navigateToFile(file = filename)
-    browseURL(target_url)
+    utils::browseURL(target_url)
   }
+  print(name)
 }
 
 #' @export
@@ -107,7 +116,8 @@ get_config <- function(name){
     yaml::read_yaml()
 }
 
-
+#' @import httr
+#' @importFrom purrr when
 get_encoding <- function(target_url) {
   target_url %>% httr::GET() %>%
     httr::content("raw") %>%
@@ -119,6 +129,7 @@ get_encoding <- function(target_url) {
     purrr::when(
       identical(., character(0)) ~ NA,
       length(.) != 1 ~ NA,
-      ~ .
+      "utf8" == . ~ "UTF-8",
+      "euckr" == . ~ "EUC-KR"
     )
 }

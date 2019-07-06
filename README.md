@@ -100,7 +100,7 @@ target %>%
 #> $ title        <chr> "추신수, 희생플라이로 1타점 추가…타율 0.285"
 #> $ body         <chr> "텍사스 추신수(37)가 희생플라이로 타점을 올렸다.추신수는 28일(한국시간) 코메리카파...
 #> $ from         <chr> "일간스포츠"
-#> $ published_at <dttm> 2019-07-06 18:44:21
+#> $ published_at <dttm> 2019-07-07 02:52:08
 #> $ edited_at    <dttm> NA
 #> $ by           <chr> NA
 #> [1] "http://www.mediatoday.co.kr/news/articleView.html?idxno=200760"
@@ -122,6 +122,14 @@ target %>%
 #> $ edited_at    <dttm> 2019-06-24 19:36:00
 #> $ by           <chr> "이윤정 기자"
 #> [1] "http://www.zdnet.co.kr/view/?no=20190624164954"
+#> Observations: 1
+#> Variables: 6
+#> $ title        <chr> "네이버, 관심사 기반 SNS '폴라' 접는다"
+#> $ body         <chr> "네이버가 지난 2015년 선보인 관심사 기반 소셜네트워크서비스(SNS) '폴라' 서비스...
+#> $ from         <chr> "ZDNet Korea"
+#> $ published_at <dttm> 2019-06-24 17:31:00
+#> $ edited_at    <dttm> NA
+#> $ by           <chr> "안희정 기자"
 #> [1] "https://www.hankyung.com/economy/article/2019062450611"
 #> Observations: 1
 #> Variables: 6
@@ -259,28 +267,203 @@ target %>%
 #> $ edited_at    <dttm> NA
 #> $ by           <chr> "최석환 인턴기자 ccccsh0126@asiae.co.kr"
 #> [1] "https://www.edaily.co.kr/news/read?newsId=03516166622525000&mediaCodeNo=257&OutLnkChk=Y"
+#> Observations: 1
+#> Variables: 6
+#> $ title        <chr> "나사 풀린 공무원, 근무시간에 '속눈썹 연장' 시술받다 덜미"
+#> $ body         <chr> "[이데일리 이재길 기자] 근무시간에 대전시청 수유실에서 불법 미용시술을 받은 공무원이 ...
+#> $ from         <chr> "이데일리"
+#> $ published_at <dttm> 2019-06-24 16:45:20
+#> $ edited_at    <dttm> 2019-06-24 04:47:47
+#> $ by           <chr> "이재길 기자"
 #> [1] "https://www.seoul.co.kr/news/newsView.php?id=20190625005001&wlog_sub=svt_006"
+#> Observations: 1
+#> Variables: 6
+#> $ title        <chr> "무면허·계산오류·기계 오작동… 한빛 1호기 사고는 역시나 人災"
+#> $ body         <chr> "지난달 10일 발생한 한빛 원자력발전소 1호기의 열출력 급증 사고는 무면허 운전과 제어...
+#> $ from         <chr> "서울신문"
+#> $ published_at <dttm> 2019-06-24 18:10:00
+#> $ edited_at    <dttm> 2019-06-24 18:34:00
+#> $ by           <chr> "이두걸"
 #> [1] "http://www.pressian.com/news/article/?no=246193"
+#> Observations: 1
+#> Variables: 6
+#> $ title        <chr> "여야, 패스트트랙 법안 처리 합의 문구 만들었다"
+#> $ body         <chr> "두 달 가까이 멈춰섰던 국회가 가까스로 다시 활로를 찾았다. 더불어민주당·자유한국당·바...
+#> $ from         <chr> "프레시안"
+#> $ published_at <dttm> 2019-06-24 16:27:18
+#> $ edited_at    <dttm> NA
+#> $ by           <chr> "곽재훈 기자"
 #> [1] "http://mbn.mk.co.kr/pages/news/newsView.php?ref=newsstand&news_seq_no=3870180&pos=20002_3"
+#> Observations: 1
+#> Variables: 6
+#> $ title        <chr> "트럼프 미국 대통령 29일 방한…한미정상회담 열려"
+#> $ body         <chr> "【 앵커멘트 】 트럼프 미국 대통령이 오는 29일 1박 2일간의 일정으로 우리나라를 방...
+#> $ from         <chr> "MBN매일방송"
+#> $ published_at <dttm> 2019-06-24 19:30:00
+#> $ edited_at    <dttm> 2019-06-24 20:04:00
+#> $ by           <chr> "황재헌"
 #> [1] "http://www.dt.co.kr/contents.html?article_no=2019062402109932781002&naver=stand"
+#> Observations: 1
+#> Variables: 6
+#> $ title        <chr> "건조기·식기세척기 등 ‘新가전’ 부상… 신기록 달성 주목"
+#> $ body         <chr> "[디지털타임스 박정일 기자] 최근 생활 환경과 소비자 라이프스타일의 급격한 변화로 등장...
+#> $ from         <chr> "디지털타임스"
+#> $ published_at <dttm> 2019-06-24 06:41:00
+#> $ edited_at    <dttm> NA
+#> $ by           <chr> "박정일 기자"
 #> [1] "https://www.nocutnews.co.kr/news/5171990"
+#> Observations: 1
+#> Variables: 6
+#> $ title        <chr> "서울 청량리 재개발 지역 농성자, 폭발 사고로 사망"
+#> $ body         <chr> "서울 청량리 재개발 건물 옥상에서 농성을 벌이던 50대 남성이 폭발 사고로 숨졌다.서울...
+#> $ from         <chr> "노컷뉴스"
+#> $ published_at <dttm> 2019-06-24 22:38:22
+#> $ edited_at    <dttm> NA
+#> $ by           <chr> "김태헌 기자"
 #> [1] "https://www.mk.co.kr/news/politics/view/2019/06/451795/"
+#> Observations: 1
+#> Variables: 6
+#> $ title        <chr> "한국당, 2시간만에 與野합의 뒤집어…6월 국회도 파행"
+#> $ body         <chr> "80일 만에 재가동될 것으로 기대를 모았던 국회가 제1야당인 자유한국당의 합의안 추인 ...
+#> $ from         <chr> "매일경제"
+#> $ published_at <dttm> 2019-06-24 21:05:36
+#> $ edited_at    <dttm> 2019-06-25 09:59:54
+#> $ by           <chr> "김명환, 백상경 기자"
 #> [1] "https://www.ytn.co.kr/_ln/0103_201906241617041128_005"
+#> Observations: 1
+#> Variables: 6
+#> $ title        <chr> "'YG 성 접대' 싸이 소환...\"양현석도 조사 방침\""
+#> $ body         <chr> "앵커 양현석 전 YG엔터테인먼트 대표의 성 접대 의혹을 내사하는 경찰이 자리에 동석했던...
+#> $ from         <chr> "YTN"
+#> $ published_at <dttm> 2019-06-24 16:17:00
+#> $ edited_at    <dttm> NA
+#> $ by           <chr> NA
 #> [1] "http://www.bloter.net/archives/343946"
+#> Observations: 1
+#> Variables: 6
+#> $ title        <chr> "카카오, 머신러닝 문제해결 대회 ‘카카오아레나’ 개최"
+#> $ body         <chr> "카카오가 머신러닝을 이용한 문제해결 대회 ‘제2회 카카오아레나’를 개최한다고 6월24일...
+#> $ from         <chr> "Bloter.net"
+#> $ published_at <dttm> 2019-06-24
+#> $ edited_at    <dttm> NA
+#> $ by           <chr> "이기범"
 #> [1] "http://news.mt.co.kr/mtview.php?no=2019062418127667075&cast=1&STAND=MTS_P"
+#> Observations: 1
+#> Variables: 6
+#> $ title        <chr> "한국당에 날아간 국회 정상화…나경원 리더십 '뭇매' 불가피"
+#> $ body         <chr> "자유한국당이 24일 여야 3당 원내교섭단체 원내대표간 합의에 대한 추인을 거부하면서 나...
+#> $ from         <chr> "머니투데이"
+#> $ published_at <dttm> 2019-06-24 18:32:54
+#> $ edited_at    <dttm> NA
+#> $ by           <chr> "백지수 , 조준영"
 #> [1] "http://sports.donga.com/NewsStand/3/all/20190624/96150971/1"
+#> Observations: 1
+#> Variables: 6
+#> $ title        <chr> "김새롬, 이혼 후 G사 부회장님과?…깜짝 고백"
+#> $ body         <chr> "오는 25일 방송되는 MBC에브리원 '비디오스타'는 ’이 구성 마지막! 완판 남녀 특집...
+#> $ from         <chr> "스포츠동아"
+#> $ published_at <dttm> 2019-06-24 10:16:00
+#> $ edited_at    <dttm> NA
+#> $ by           <chr> NA
 #> [1] "http://www.newsis.com/view/?id=NISX20190624_0000690173&cid="
+#> Observations: 1
+#> Variables: 6
+#> $ title        <chr> "'진격의 나경원' 휘청…국회 정상화 한국당 의원들 '비토' 왜?"
+#> $ body         <chr> "【서울=뉴시스】박준호 기자 = 나경원 자유한국당 원내대표가 두 달 넘게 닫혀 있는 국회...
+#> $ from         <chr> "뉴시스"
+#> $ published_at <dttm> 2019-06-24 19:55:47
+#> $ edited_at    <dttm> NA
+#> $ by           <chr> NA
 #> [1] "http://news.jtbc.joins.com/html/034/NB11838034.html"
+#> Observations: 1
+#> Variables: 6
+#> $ title        <chr> "황교안, 성적 낮춘 건 거짓말 아니다?…반발 부른 해명"
+#> $ body         <chr> "[앵커]자유한국당 황교안 대표가 지난주에 대학에서 '학점과 토익점수가 높지 않은 아들의...
+#> $ from         <chr> "JTBC"
+#> $ published_at <dttm> 2019-06-24 21:03:00
+#> $ edited_at    <dttm> NA
+#> $ by           <chr> "노진호 기자"
 #> [1] "https://www.sisain.co.kr/?mod=news&act=articleView&idxno=34905"
+#> Observations: 1
+#> Variables: 6
+#> $ title        <chr> "타다, 혁신과 약탈 사이 어디로 모실까요"
+#> $ body         <chr> "택시는 왜 불편할까? 가장 먼저 떠오르는 것은 승차 거부다. 최근 사회적 논란으로 떠오...
+#> $ from         <chr> "시사IN"
+#> $ published_at <dttm> 2019-06-17 10:40:52
+#> $ edited_at    <dttm> 2019-06-24
+#> $ by           <chr> "전혜원 기자"
 #> [1] "http://www.mydaily.co.kr/new_yk/html/read.php?newsid=201906242319596580"
-#> [1] "http://www.munhwa.com/news/view.html?no=20190624MW145118207290&w=ns"
+#> Observations: 1
+#> Variables: 6
+#> $ title        <chr> "'안녕하세요' 이국주 최근 8~9kg 감량… 7kg 더 감량할 것"
+#> $ body         <chr> "[마이데일리 = 장민혜 객원기자] 개그우먼 이국주가 다이어트 중이라고 밝혔다. 24일 ...
+#> $ from         <chr> "마이데일리"
+#> $ published_at <dttm> 2019-06-24 23:19:31
+#> $ edited_at    <dttm> NA
+#> $ by           <chr> "장민혜 객원기자 selise@mydaily.co.kr"
 #> [1] "http://www.sportsseoul.com/news/read/780324"
+#> Observations: 1
+#> Variables: 6
+#> $ title        <chr> "박찬호, 큰 딸과 류현진 경기 관람 \"다저스 구장 나들이\"[★SNS]"
+#> $ body         <chr> "[스포츠서울 윤소윤기자]원조 야구스타 박찬호 전 메이저리거가 딸과 함께한 근황을 공개했...
+#> $ from         <chr> "스포츠서울"
+#> $ published_at <dttm> 2019-06-24 13:29:00
+#> $ edited_at    <dttm> 2019-06-24 13:29:00
+#> $ by           <chr> "윤소윤"
 #> [1] "http://news.kbs.co.kr/news/view.do?ncd=4228349"
+#> Observations: 1
+#> Variables: 6
+#> $ title        <chr> "야당도 찬성한 ‘집배원 증원예산’, ‘소소위’에서 사라졌다"
+#> $ body         <chr> "[앵커]집배원들이 장시간 노동에 내몰리는 이유는 인력이 현저하게 부족해섭니다. 파업 목...
+#> $ from         <chr> "KBS 뉴스"
+#> $ published_at <dttm> 2019-06-24 21:20:00
+#> $ edited_at    <dttm> 2019-06-24 22:14:00
+#> $ by           <chr> "김연주"
 #> [1] "http://www.etnews.com/20190624000311?mc=ns_003_00002"
+#> Observations: 1
+#> Variables: 6
+#> $ title        <chr> "[국제]WSJ “美, 중국 내 생산 5G 장비 반입 금지 검토”"
+#> $ body         <chr> "중국 화웨이 5세대(5G) 장비에 이어 중국에서 만들어진 모든 5G 장비에 대한 미국 ...
+#> $ from         <chr> "전자신문"
+#> $ published_at <dttm> 2019-06-24 16:05:00
+#> $ edited_at    <dttm> NA
+#> $ by           <chr> "박진형"
 #> [1] "http://imnews.imbc.com/replay/2019/nwdesk/article/5377194_24634.html"
+#> Observations: 1
+#> Variables: 6
+#> $ title        <chr> "해외서 번 돈 이것밖에?…이번엔 '역외탈세' 포착"
+#> $ body         <chr> "◀ 앵커 ▶ 이미 여러 차례 탈세 의혹이 제기됐던 효성그룹이 이번에는 해외 법인을 이용...
+#> $ from         <chr> "MBC NEWS"
+#> $ published_at <dttm> 2019-06-24 20:15:02
+#> $ edited_at    <dttm> 2019-06-24 20:43:00
+#> $ by           <chr> "임소정"
 #> [1] "http://news.khan.co.kr/kh_news/khan_art_view.html?artid=201906252223015&code=910402"
+#> Observations: 1
+#> Variables: 6
+#> $ title        <chr> "“우리공화당 작명에 박근혜 전 대통령이 관여”"
+#> $ body         <chr> "전 대한애국당 관계자 주장“유영하 변호사 통해 교감”박 ‘옥중정치’ 본격화 논란 대한애...
+#> $ from         <chr> "경향신문"
+#> $ published_at <dttm> 2019-06-25 22:51:09
+#> $ edited_at    <dttm> NA
+#> $ by           <chr> "허남설 기자 nsheo@kyunghyang.com"
 #> [1] "http://www.osen.co.kr/article/G1111170712"
+#> Observations: 1
+#> Variables: 6
+#> $ title        <chr> "西 언론, \"이강인 미래, 발렌시아 이적시장에 달렸다\" - OSEN"
+#> $ body         <chr> "[OSEN=강필주 기자] 이강인의 미래는 결국 이번 여름 소속팀 발렌시아의 이적 상황에...
+#> $ from         <chr> "OSEN"
+#> $ published_at <dttm> NA
+#> $ edited_at    <dttm> NA
+#> $ by           <chr> "강필주"
 #> [1] "http://www.inews24.com/view/1180471"
+#> Observations: 1
+#> Variables: 6
+#> $ title        <chr> "KT 빅데이터 플랫폼, 클라우드서 쓴다"
+#> $ body         <chr> "[아이뉴스24 김국배 기자] KT가 빅데이터 플랫폼을 연내 클라우드 서비스 방식으로 제...
+#> $ from         <chr> "inews24"
+#> $ published_at <dttm> 2019-05-21 14:11:00
+#> $ edited_at    <dttm> 2019-05-21 19:32:00
+#> $ by           <chr> "김국배"
 #> [1] "https://www.hankyung.com/economy/article/2019062450291"
 #> Observations: 1
 #> Variables: 6

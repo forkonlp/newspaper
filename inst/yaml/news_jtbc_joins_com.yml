@@ -1,0 +1,21 @@
+name: news_jtbc_joins_com
+site: http://news.jtbc.joins.com
+encoding: UTF-8
+title:
+  node: meta[property="og:title"]
+  attr: content
+body:
+  node: div.article_content
+  attr: pass
+from:
+  node: meta[property="article:section"]
+  attr: content
+published_at:
+  node: meta[property="article:published_time"]
+  attr: content
+edited_at:
+  node: .na
+  attr: .na
+by:
+  node: meta[property="dable:author"]
+  attr: content

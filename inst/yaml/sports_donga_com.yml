@@ -1,0 +1,21 @@
+name: sports_donga_com
+site: http://sports.donga.com
+encoding: .na
+title:
+  node: meta[property="og:title"]
+  attr: content
+body:
+  node: div.article_word
+  attr: pass
+from:
+  node: meta[name="writer"]
+  attr: content
+published_at:
+  node: span.inp_time
+  attr: .na
+edited_at:
+  node: .na
+  attr: .na
+by:
+  node: .na
+  attr: .na

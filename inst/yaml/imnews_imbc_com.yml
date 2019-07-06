@@ -1,0 +1,21 @@
+name: imnews_imbc_com
+site: http://imnews.imbc.com
+encoding: UTF-8
+title:
+  node: title
+  attr: .na
+body:
+  node: section[itemprop="articleBody"]
+  attr: pass
+from:
+  node: meta[property="og:site_name"]
+  attr: content
+published_at:
+  node: meta[property="article:published_time"]
+  attr: content
+edited_at:
+  node: meta[name="nextweb:modDate"]
+  attr: content
+by:
+  node: meta[name="author"]
+  attr: content

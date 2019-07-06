@@ -1,0 +1,21 @@
+name: mbn_mk_co_kr
+site: http://mbn.mk.co.kr
+encoding: utf8
+title:
+  node: meta[name="title"]
+  attr: content
+body:
+  node: div#article_2018 div#newsViewArea
+  attr: pass
+from:
+  node: div#gnblogo_sub a img
+  attr: alt
+published_at:
+  node: span.time span.time
+  attr: .na
+edited_at:
+  node: span.time span.time
+  attr: .na
+by:
+  node: meta[property="article:author"]
+  attr: content

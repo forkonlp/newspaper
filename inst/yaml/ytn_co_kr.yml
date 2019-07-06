@@ -1,0 +1,21 @@
+name: ytn_co_kr
+site: https://www.ytn.co.kr
+encoding: utf-8
+title:
+  node: div.article_tit
+  attr: .na
+body:
+  node: div.article_paragraph span
+  attr: pass
+from:
+  node: title
+  attr: .na
+published_at:
+  node: meta[property="article:published_time"]
+  attr: content
+edited_at:
+  node: .na
+  attr: .na
+by:
+  node: .na
+  attr: .na

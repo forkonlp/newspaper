@@ -1,0 +1,21 @@
+name: inews24_com
+site: http://www.inews24.com
+encoding: UTF-8
+title:
+  node: title
+  attr: .na
+body:
+  node: article[itemprop="articleBody"]
+  attr: pass
+from:
+  node: meta[property="og:site_name"]
+  attr: content
+published_at:
+  node: section.body header.view time
+  attr: .na
+edited_at:
+  node: section.body header.view time
+  attr: .na
+by:
+  node: meta[property="og:article:author"]
+  attr: content

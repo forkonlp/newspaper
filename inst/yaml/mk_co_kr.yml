@@ -1,0 +1,21 @@
+name: mk_co_kr
+site: https://www.mk.co.kr
+encoding: euckr
+title:
+  node: h1.top_title
+  attr: .na
+body:
+  node: div#article_body div.art_txt
+  attr: pass
+from:
+  node: meta[property="og:site_name"]
+  attr: content
+published_at:
+  node: meta[property="article:published"]
+  attr: content
+edited_at:
+  node: meta[property="article:modified"]
+  attr: content
+by:
+  node: li.author
+  attr: .na

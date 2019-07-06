@@ -1,0 +1,21 @@
+name: mydaily_co_kr
+site: http://www.mydaily.co.kr
+encoding: .na
+title:
+  node: meta[property="og:title"]
+  attr: content
+body:
+  node: div.read_view_text
+  attr: pass
+from:
+  node: script[type="application/ld+json"]
+  attr: .na
+published_at:
+  node: meta[property="article:published_time"]
+  attr: content
+edited_at:
+  node: .na
+  attr: .na
+by:
+  node: meta[property="dable:author"]
+  attr: content

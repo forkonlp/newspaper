@@ -1,0 +1,21 @@
+name: newsis_com
+site: http://www.newsis.com
+encoding: UTF-8
+title:
+  node: meta[property="og:title"]
+  attr: content
+body:
+  node: div#textBody
+  attr: pass
+from:
+  node: meta[name="writer"]
+  attr: content
+published_at:
+  node: meta[property="article:published_time"]
+  attr: content
+edited_at:
+  node: .na
+  attr: .na
+by:
+  node: .na
+  attr: .na

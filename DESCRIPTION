@@ -16,14 +16,19 @@ Depends:
     R (>= 2.10)
 Imports: 
     tibble,
+    lubridate, 
     magrittr,
     dplyr,
+    tidyr,
+    yaml,
     stringr,
     purrr,
     xml2,
     rvest,
     urltools,
-    httr
+    httr,
+    rstudioapi,
+    jsonlite
 Suggests: 
     testthat (>= 2.1.0),
     covr

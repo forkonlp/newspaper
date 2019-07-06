@@ -1,0 +1,21 @@
+name: news_kbs_co_kr
+site: http://news.kbs.co.kr
+encoding: UTF-8
+title:
+  node: meta[name="title"]
+  attr: content
+body:
+  node: div#cont_newstext
+  attr: pass
+from:
+  node: meta[property="og:site_name"]
+  attr: content
+published_at:
+  node: span.txt-info em.date
+  attr: .na
+edited_at:
+  node: span.txt-info em.date
+  attr: .na
+by:
+  node: meta[name="twitter:creator"]
+  attr: content

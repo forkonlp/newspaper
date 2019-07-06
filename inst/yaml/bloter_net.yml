@@ -1,0 +1,21 @@
+name: bloter_net
+site: http://www.bloter.net
+encoding: UTF-8
+title:
+  node: h1.headline
+  attr: .na
+body:
+  node: div[class="article--content"]
+  attr: pass
+from:
+  node: meta[property="og:site_name"]
+  attr: content
+published_at:
+  node: span.publish
+  attr: .na
+edited_at:
+  node: .na
+  attr: .na
+by:
+  node: meta[property="dable:author"]
+  attr: content

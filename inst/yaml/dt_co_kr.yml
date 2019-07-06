@@ -1,0 +1,21 @@
+name: dt_co_kr
+site: http://www.dt.co.kr
+encoding: euckr
+title:
+  node: meta[name="title"]
+  attr: content
+body:
+  node: div#article_body div.art_txt
+  attr: pass
+from:
+  node: meta[name="description"]
+  attr: content
+published_at:
+  node: li.lasttime
+  attr: .na
+edited_at:
+  node: .na
+  attr: .na
+by:
+  node: li.author a
+  attr: .na
