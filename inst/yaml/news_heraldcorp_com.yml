@@ -1,0 +1,21 @@
+name: news_heraldcorp_com
+site: http://news.heraldcorp.com
+encoding: utf8
+title:
+  node: meta[name="title"]
+  attr: content
+body:
+  node: div#articleText
+  attr: pass
+from:
+  node: meta[name="author"]
+  attr: content
+published_at:
+  node: meta[property="article:published_time"]
+  attr: content
+edited_at:
+  node: .na
+  attr: .na
+by:
+  node: .na
+  attr: .na

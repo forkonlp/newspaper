@@ -216,3 +216,8 @@ body_news_chosun_com <- function(x) {
     remove_tag(tar_rm) %>%
     finish_basic()
 }
+
+body_news_heraldcorp_com <- function(x) {
+    remove_tag(x, "table") %>%
+    finish_basic()
+}
