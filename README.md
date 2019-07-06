@@ -85,7 +85,7 @@ target %>%
 #> $ published_at <dttm> 2019-06-24 16:36:17
 #> $ edited_at    <dttm> NA
 #> $ by           <chr> "김창영 기자"
-#> [1] "http://sports.chosun.com/news/ntype5.htm?id=201906250100173480011943&ServiceDate=20190624"
+#> [1] "http://sports.chosun.com/news/ntype.htm?id=201906250100173480011943&ServiceDate=20190624"
 #> Observations: 1
 #> Variables: 6
 #> $ title        <chr> "[SC핫포커스]'성장통? DTD?' NC 급추락 어떻게 봐야하나"
@@ -100,7 +100,7 @@ target %>%
 #> $ title        <chr> "추신수, 희생플라이로 1타점 추가…타율 0.285"
 #> $ body         <chr> "텍사스 추신수(37)가 희생플라이로 타점을 올렸다.추신수는 28일(한국시간) 코메리카파...
 #> $ from         <chr> "일간스포츠"
-#> $ published_at <dttm> 2019-07-04 21:38:13
+#> $ published_at <dttm> 2019-07-06 16:50:44
 #> $ edited_at    <dttm> NA
 #> $ by           <chr> NA
 #> [1] "http://www.mediatoday.co.kr/news/articleView.html?idxno=200760"
@@ -122,6 +122,14 @@ target %>%
 #> $ edited_at    <dttm> 2019-06-24 19:36:00
 #> $ by           <chr> "이윤정 기자"
 #> [1] "http://www.zdnet.co.kr/view/?no=20190624164954"
+#> Observations: 1
+#> Variables: 6
+#> $ title        <chr> "네이버, 관심사 기반 SNS '폴라' 접는다"
+#> $ body         <chr> "네이버가 지난 2015년 선보인 관심사 기반 소셜네트워크서비스(SNS) '폴라' 서비스...
+#> $ from         <chr> "ZDNet Korea"
+#> $ published_at <dttm> 2019-06-24 17:31:00
+#> $ edited_at    <dttm> NA
+#> $ by           <chr> "안희정 기자"
 #> [1] "https://www.hankyung.com/economy/article/2019062450611"
 #> Observations: 1
 #> Variables: 6
@@ -159,6 +167,7 @@ target %>%
 #> $ edited_at    <dttm> 2019-06-23 15:25:00
 #> $ by           <chr> NA
 #> [1] "http://www.sportalkorea.com/news/view.php?gisa_uniq=2019062413381708&key=&page=1&field=&section_code=10"
+#> No encoding supplied: defaulting to UTF-8.
 #> Observations: 1
 #> Variables: 6
 #> $ title        <chr> "베트남에 뜬 박지성 ''박항서 감독의 성공, 매우 기쁘다''"
@@ -177,12 +186,68 @@ target %>%
 #> $ edited_at    <dttm> 2019-06-24 17:05:00
 #> $ by           <chr> "한상준기자 alwaysj@donga.com"
 #> [1] "https://news.joins.com/article/23505282"
+#> Observations: 1
+#> Variables: 6
+#> $ title        <chr> "중국 유학생 77명, 제주 쇠소깍에서 쓰레기 줍는 이유"
+#> $ body         <chr> "24일 오전 제주도 쇠소깍. 쓰레기 봉투를 든 젊은이 77명이 나타났다. 이어 쓰레기 ...
+#> $ from         <chr> "중앙일보"
+#> $ published_at <dttm> 2019-06-24 18:06:28
+#> $ edited_at    <dttm> NA
+#> $ by           <chr> "왕철"
 #> [1] "https://www.hankookilbo.com/News/Read/201906242396749918?did=NS&dtype=2&dtypecode=9690&prnewsid="
+#> Observations: 1
+#> Variables: 6
+#> $ title        <chr> "주말 에티오피아 쿠데타 주동자 사살당해"
+#> $ body         <chr> "실패로 끝난 에티오피아 암하라주(州) 쿠데타의 주동자가 24일(현지시간) 사살됐다. D...
+#> $ from         <chr> "한국일보"
+#> $ published_at <dttm> 2019-06-25 08:27:57
+#> $ edited_at    <dttm> NA
+#> $ by           <chr> "김진욱"
 #> [1] "http://www.newdaily.co.kr/site/data/html/2019/06/24/2019062400170.html"
+#> Observations: 1
+#> Variables: 6
+#> $ title        <chr> "\"北 목선귀순은 국방 게이트\" 한국당, 文대통령 고발 추진"
+#> $ body         <chr> "북한 어선의 강원 삼척항 진입사건과 관련, 자유한국당 의원들이 현장을 방문하고 이번 사...
+#> $ from         <chr> "뉴데일리"
+#> $ published_at <dttm> 2019-06-24 17:14:00
+#> $ edited_at    <dttm> NA
+#> $ by           <chr> "임혜진 기자"
 #> [1] "https://news.sbs.co.kr/news/endPage.do?news_id=N1005323012&plink=STAND&cooper=NAVER"
+#> Observations: 1
+#> Variables: 6
+#> $ title        <chr> "'국회 정상화' 원내대표 합의…한국당 의총서 제동"
+#> $ body         <chr> "<앵커> 오늘(24일) 8시 뉴스는 할 일이 쌓여 있는 국회 이야기부터 해보겠습니다. ...
+#> $ from         <chr> "SBS 뉴스"
+#> $ published_at <dttm> 2019-06-24 20:10:00
+#> $ edited_at    <dttm> 2019-06-24 22:17:00
+#> $ by           <chr> "이호건"
 #> [1] "http://www.hani.co.kr/arti/society/society_general/899142.html?_ns=r2"
+#> Observations: 1
+#> Variables: 6
+#> $ title        <chr> "권성동 ‘채용비리’ 1심 무죄…서울중앙지법 형사22부가 내놓은 논리는?"
+#> $ body         <chr> "한국 사회를 흔든 채용비리 수사의 기폭제가 됐던 ‘강원랜드 채용비리’ 사건의 핵심 피고...
+#> $ from         <chr> "한겨레"
+#> $ published_at <dttm> 2019-06-24 20:07:00
+#> $ edited_at    <dttm> 2019-06-24 20:20:00
+#> $ by           <chr> "고한솔,장예지"
 #> [1] "http://www.dailian.co.kr/news/view/805409"
+#> Observations: 1
+#> Variables: 6
+#> $ title        <chr> "바른미래, 혁신위원회 구성 '연기'...실제 운영은 언제?"
+#> $ body         <chr> "바른미래당의 혁신위원회 구성이 당초 예정일보다 늦어지고 있다. 당은 혁신위원회 출범을 ...
+#> $ from         <chr> "데일리안"
+#> $ published_at <dttm> 2019-06-24 15:13:20
+#> $ edited_at    <dttm> NA
+#> $ by           <chr> "이동우 기자(dwlee99@dailian.co.kr)"
 #> [1] "http://news.chosun.com/site/data/html_dir/2019/06/24/2019062402306.html"
+#> Observations: 1
+#> Variables: 6
+#> $ title        <chr> "정권 바뀌니 '무혐의' 뒤집고 수사만 3차례…3년 시달린 권성동, 결국 '무죄'"
+#> $ body         <chr> "“피고인들에 대한 각 공소사실은 모두 범죄의 증명이 없는 경우에 해당해 무죄를 선고한다...
+#> $ from         <chr> "조선일보"
+#> $ published_at <dttm> 2019-06-24 17:54:22
+#> $ edited_at    <dttm> 2019-06-25 14:48:00
+#> $ by           <chr> "박현익 기자"
 #> [1] "http://news.heraldcorp.com/view.php?ud=20190624000010&nt=1&md=20190624071612_BL"
 #> [1] "https://view.asiae.co.kr/article/2019062420075833804"
 #> [1] "https://www.edaily.co.kr/news/read?newsId=03516166622525000&mediaCodeNo=257&OutLnkChk=Y"
