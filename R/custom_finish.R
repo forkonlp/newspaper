@@ -251,3 +251,48 @@ body_view_asiae_co_kr <- function(x){
   remove_tag(x, rm_tar) %>%
     finish_basic()
 }
+
+
+edited_at_edaily_co_kr <- function(x) {
+  x[2] %>%
+    stringr::str_squish() %>%
+    lubridate::ymd_hms(tz = "Asia/Seoul", quiet = T)
+}
+
+body_edaily_co_kr <- function(x){
+  rm_tar <- c(
+    "table"
+  )
+  remove_tag(x, rm_tar) %>%
+    finish_basic()
+}
+
+read_seoul_co_kr <- function(x, encoding) {
+  httr::GET(x) %>%
+    httr::content("raw") %>%
+    rawToChar() %>%
+    xml2::read_html()
+}
+
+body_seoul_co_kr <- function(x) {
+  rm_tar <- c(
+    "div.stit",
+    "strong",
+    "script",
+    "div.v_photoarea"
+  )
+  remove_tag(x, rm_tar) %>%
+    finish_basic()
+}
+
+edited_at_seoul_co_kr <- function(x) {
+  stringr::str_split(x, stringr::fixed("ㅣ")) %>%
+    .[[1]] %>% .[2] %>%
+    stringr::str_squish() %>%
+    lubridate::ymd_hm(tz = "Asia/Seoul", quiet = T)
+}
+
+from_pressian_com <- function(x) {
+  stringr::str_split(x, " ") %>%
+    .[[1]] %>% .[length(.)]
+}

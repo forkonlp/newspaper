@@ -1,0 +1,21 @@
+name: edaily_co_kr
+site: https://www.edaily.co.kr
+encoding: utf8
+title:
+  node: title
+  attr: .na
+body:
+  node: div.news_body
+  attr: pass
+from:
+  node: meta[property="og:site_name"]
+  attr: content
+published_at:
+  node: meta[property="article:published_time"]
+  attr: content
+edited_at:
+  node: div.dates ul li p
+  attr: .na
+by:
+  node: p.reporter_name a
+  attr: .na

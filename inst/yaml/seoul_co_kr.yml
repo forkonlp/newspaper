@@ -1,0 +1,21 @@
+name: seoul_co_kr
+site: https://www.seoul.co.kr
+encoding: utf-8
+title:
+  node: meta[property="og:title"]
+  attr: content
+body:
+  node: div#atic_txt1
+  attr: pass
+from:
+  node: meta[property="og:site_name"]
+  attr: content
+published_at:
+  node: p.v_days span
+  attr: content
+edited_at:
+  node: p.v_days
+  attr: .na
+by:
+  node: meta[property="dable:author"]
+  attr: content

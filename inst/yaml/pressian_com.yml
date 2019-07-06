@@ -1,0 +1,21 @@
+name: pressian_com
+site: http://www.pressian.com
+encoding: .na
+title:
+  node: title
+  attr: .na
+body:
+  node: div#CmAdContent
+  attr: pass
+from:
+  node: meta[name="Copyright"]
+  attr: content
+published_at:
+  node: div.byotherspan div.date
+  attr: .na
+edited_at:
+  node: .na
+  attr: .na
+by:
+  node: meta[property="dable:author"]
+  attr: content
