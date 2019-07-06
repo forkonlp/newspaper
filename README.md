@@ -100,7 +100,7 @@ target %>%
 #> $ title        <chr> "추신수, 희생플라이로 1타점 추가…타율 0.285"
 #> $ body         <chr> "텍사스 추신수(37)가 희생플라이로 타점을 올렸다.추신수는 28일(한국시간) 코메리카파...
 #> $ from         <chr> "일간스포츠"
-#> $ published_at <dttm> 2019-07-06 16:50:44
+#> $ published_at <dttm> 2019-07-06 18:44:21
 #> $ edited_at    <dttm> NA
 #> $ by           <chr> NA
 #> [1] "http://www.mediatoday.co.kr/news/articleView.html?idxno=200760"
@@ -122,14 +122,6 @@ target %>%
 #> $ edited_at    <dttm> 2019-06-24 19:36:00
 #> $ by           <chr> "이윤정 기자"
 #> [1] "http://www.zdnet.co.kr/view/?no=20190624164954"
-#> Observations: 1
-#> Variables: 6
-#> $ title        <chr> "네이버, 관심사 기반 SNS '폴라' 접는다"
-#> $ body         <chr> "네이버가 지난 2015년 선보인 관심사 기반 소셜네트워크서비스(SNS) '폴라' 서비스...
-#> $ from         <chr> "ZDNet Korea"
-#> $ published_at <dttm> 2019-06-24 17:31:00
-#> $ edited_at    <dttm> NA
-#> $ by           <chr> "안희정 기자"
 #> [1] "https://www.hankyung.com/economy/article/2019062450611"
 #> Observations: 1
 #> Variables: 6
@@ -249,7 +241,23 @@ target %>%
 #> $ edited_at    <dttm> 2019-06-25 14:48:00
 #> $ by           <chr> "박현익 기자"
 #> [1] "http://news.heraldcorp.com/view.php?ud=20190624000010&nt=1&md=20190624071612_BL"
+#> Observations: 1
+#> Variables: 6
+#> $ title        <chr> "고유정 \"신상공개 결정 부당\" 소송했다가 취하"
+#> $ body         <chr> "[헤럴드경제=송형근 기자] 전 남편을 잔인하게 살해하고 유기한 혐의를 받는 고유정(36...
+#> $ from         <chr> "헤럴드경제"
+#> $ published_at <dttm> 2019-06-24 07:14:54
+#> $ edited_at    <dttm> NA
+#> $ by           <chr> NA
 #> [1] "https://view.asiae.co.kr/article/2019062420075833804"
+#> Observations: 1
+#> Variables: 6
+#> $ title        <chr> "경찰, 가능성 없다 했지만…고유정 제주서 '종량제 봉투 4개' 버렸다"
+#> $ body         <chr> "[아시아경제 최석환 인턴기자] '제주 전 남편 살해사건' 피의자 고유정(36·여)이 제...
+#> $ from         <chr> "아시아경제"
+#> $ published_at <dttm> 2019-06-24 20:50:05
+#> $ edited_at    <dttm> NA
+#> $ by           <chr> "최석환 인턴기자 ccccsh0126@asiae.co.kr"
 #> [1] "https://www.edaily.co.kr/news/read?newsId=03516166622525000&mediaCodeNo=257&OutLnkChk=Y"
 #> [1] "https://www.seoul.co.kr/news/newsView.php?id=20190625005001&wlog_sub=svt_006"
 #> [1] "http://www.pressian.com/news/article/?no=246193"

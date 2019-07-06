@@ -237,3 +237,17 @@ edited_at_view_asiae_co_kr <- function(x) {
     return(cand1)
   }
 }
+
+
+body_view_asiae_co_kr <- function(x){
+  rm_tar <- c(
+    "div.article_photo",
+    "div.art_btm",
+    "div.news_twobox",
+    "div.add_banner",
+    "p.txt_prohibition",
+    "div.e_article"
+  )
+  remove_tag(x, rm_tar) %>%
+    finish_basic()
+}

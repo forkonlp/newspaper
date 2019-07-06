@@ -5,7 +5,7 @@ title:
   node: meta[property="og:title"]
   attr: content
 body:
-  node: .na
+  node: div[itemprop="articleBody"]
   attr: pass
 from:
   node: meta[property="og:site_name"]
@@ -17,5 +17,5 @@ edited_at:
   node: p[class="user_data"]
   attr: .na
 by:
-  node: .na
+  node: div[itemprop="articleBody"] div.e_article
   attr: .na
