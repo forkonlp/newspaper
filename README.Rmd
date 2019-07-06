@@ -19,7 +19,6 @@ knitr::opts_chunk$set(
 [![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/forkonlp/newspaper?branch=master&svg=true)](https://ci.appveyor.com/project/forkonlp/newspaper)
 <!-- badges: end -->
 
-
 The goal of newspaper is to extract contents from Newspaper's website.
 
 ## Installation

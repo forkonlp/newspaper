@@ -1,0 +1,21 @@
+name: news_chosun_com
+site: http://news.chosun.com
+encoding: .na
+title:
+  node: meta[name="title"]
+  attr: content
+body:
+  node: .na
+  attr: pass
+from:
+  node: meta[name="news_keywords"]
+  attr: content
+published_at:
+  node: meta[property="article:published_time"]
+  attr: content
+edited_at:
+  node: div.news_date
+  attr: .na
+by:
+  node: meta[property="dable:author"]
+  attr: content
