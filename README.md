@@ -29,21 +29,15 @@ This is a basic example which shows you how to solve a common problem:
 
 ``` r
 library(newspaper)
-library(dplyr)
 library(stringr)
 
 news <- np_news("http://www.segye.com/newsView/20190624511168")
 
-news %>% 
-  glimpse()
-#> Observations: 1
-#> Variables: 6
-#> $ title        <chr> "민노총, 文정부와 전쟁 선포… \"도 넘었다\" 여론 냉담"
-#> $ body         <chr> "국회 앞 집회에서 차단벽을 부수고 경찰을 폭행하는 등 불법행위를 주도한 혐의로 구속영장...
-#> $ from         <chr> "세계일보"
-#> $ published_at <dttm> 2019-06-24 19:58:31
-#> $ edited_at    <dttm> 2019-06-24 22:11:38
-#> $ by           <chr> "김승환"
+news 
+#> # A tibble: 1 x 6
+#>   title     body        from  published_at        edited_at           by   
+#>   <chr>     <chr>       <chr> <dttm>              <dttm>              <chr>
+#> 1 "민노총, 文정~ 국회 앞 집회에서 ~ 세계일보~ 2019-06-24 19:58:31 2019-06-24 22:11:38 김승환~
 
 news$title
 #> [1] "민노총, 文정부와 전쟁 선포… \"도 넘었다\" 여론 냉담"

@@ -36,13 +36,11 @@ This is a basic example which shows you how to solve a common problem:
 
 ```{r example, message=F}
 library(newspaper)
-library(dplyr)
 library(stringr)
 
 news <- np_news("http://www.segye.com/newsView/20190624511168")
 
-news %>% 
-  glimpse()
+news 
 
 news$title
 news$from
