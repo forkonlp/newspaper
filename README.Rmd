@@ -38,14 +38,16 @@ This is a basic example which shows you how to solve a common problem:
 library(newspaper)
 library(dplyr)
 
-np_news("http://1318virus.net/?p=1129") %>% 
+np_news("http://www.mediatoday.co.kr/news/articleView.html?idxno=201015")
+
+np_news("http://www.mediatoday.co.kr/news/articleView.html?idxno=201015") %>% 
   glimpse()
 
 ```
 
 ## 네이버 뉴스 스탠드 주요 언론사
 
-```{r}
+```{r echo=F}
 library(tibble)
 library(purrr)
 
