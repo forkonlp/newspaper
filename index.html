@@ -90,23 +90,76 @@
 <p>This is a basic example which shows you how to solve a common problem:</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(newspaper)</a>
 <a class="sourceLine" id="cb2-2" data-line-number="2"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(dplyr)</a>
-<a class="sourceLine" id="cb2-3" data-line-number="3"></a>
-<a class="sourceLine" id="cb2-4" data-line-number="4"><span class="kw"><a href="reference/np_news.html">np_news</a></span>(<span class="st">"http://www.mediatoday.co.kr/news/articleView.html?idxno=201015"</span>)</a>
-<a class="sourceLine" id="cb2-5" data-line-number="5"><span class="co">#&gt; # A tibble: 1 x 6</span></a>
-<a class="sourceLine" id="cb2-6" data-line-number="6"><span class="co">#&gt;   title     body        from  published_at        edited_at           by   </span></a>
-<a class="sourceLine" id="cb2-7" data-line-number="7"><span class="co">#&gt;   &lt;chr&gt;     &lt;chr&gt;       &lt;chr&gt; &lt;dttm&gt;              &lt;dttm&gt;              &lt;chr&gt;</span></a>
-<a class="sourceLine" id="cb2-8" data-line-number="8"><span class="co">#&gt; 1 “파업 동의하지… 학교 비정규직인 급… 미디어오… 2019-07-06 13:46:41 NA                  김예리 …</span></a>
-<a class="sourceLine" id="cb2-9" data-line-number="9"></a>
-<a class="sourceLine" id="cb2-10" data-line-number="10"><span class="kw"><a href="reference/np_news.html">np_news</a></span>(<span class="st">"http://www.mediatoday.co.kr/news/articleView.html?idxno=201015"</span>) <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb2-11" data-line-number="11"><span class="st">  </span><span class="kw"><a href="https://dplyr.tidyverse.org/reference/reexports.html">glimpse</a></span>()</a>
-<a class="sourceLine" id="cb2-12" data-line-number="12"><span class="co">#&gt; Observations: 1</span></a>
-<a class="sourceLine" id="cb2-13" data-line-number="13"><span class="co">#&gt; Variables: 6</span></a>
-<a class="sourceLine" id="cb2-14" data-line-number="14"><span class="co">#&gt; $ title        &lt;chr&gt; "“파업 동의하지만 아이들 우선” 부산일보 왜곡보도"</span></a>
-<a class="sourceLine" id="cb2-15" data-line-number="15"><span class="co">#&gt; $ body         &lt;chr&gt; "학교 비정규직인 급식조리 노동자들이 이번 공공부문 비정규직 총파업에 학생들을 위해 불참했다…</span></a>
-<a class="sourceLine" id="cb2-16" data-line-number="16"><span class="co">#&gt; $ from         &lt;chr&gt; "미디어오늘"</span></a>
-<a class="sourceLine" id="cb2-17" data-line-number="17"><span class="co">#&gt; $ published_at &lt;dttm&gt; 2019-07-06 13:46:41</span></a>
-<a class="sourceLine" id="cb2-18" data-line-number="18"><span class="co">#&gt; $ edited_at    &lt;dttm&gt; NA</span></a>
-<a class="sourceLine" id="cb2-19" data-line-number="19"><span class="co">#&gt; $ by           &lt;chr&gt; "김예리 기자"</span></a></code></pre></div>
+<a class="sourceLine" id="cb2-3" data-line-number="3"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(stringr)</a>
+<a class="sourceLine" id="cb2-4" data-line-number="4"></a>
+<a class="sourceLine" id="cb2-5" data-line-number="5">news &lt;-<span class="st"> </span><span class="kw"><a href="reference/np_news.html">np_news</a></span>(<span class="st">"http://www.segye.com/newsView/20190624511168"</span>)</a>
+<a class="sourceLine" id="cb2-6" data-line-number="6"></a>
+<a class="sourceLine" id="cb2-7" data-line-number="7">news <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb2-8" data-line-number="8"><span class="st">  </span><span class="kw"><a href="https://dplyr.tidyverse.org/reference/reexports.html">glimpse</a></span>()</a>
+<a class="sourceLine" id="cb2-9" data-line-number="9"><span class="co">#&gt; Observations: 1</span></a>
+<a class="sourceLine" id="cb2-10" data-line-number="10"><span class="co">#&gt; Variables: 6</span></a>
+<a class="sourceLine" id="cb2-11" data-line-number="11"><span class="co">#&gt; $ title        &lt;chr&gt; "민노총, 文정부와 전쟁 선포… \"도 넘었다\" 여론 냉담"</span></a>
+<a class="sourceLine" id="cb2-12" data-line-number="12"><span class="co">#&gt; $ body         &lt;chr&gt; "국회 앞 집회에서 차단벽을 부수고 경찰을 폭행하는 등 불법행위를 주도한 혐의로 구속영장이 …</span></a>
+<a class="sourceLine" id="cb2-13" data-line-number="13"><span class="co">#&gt; $ from         &lt;chr&gt; "세계일보"</span></a>
+<a class="sourceLine" id="cb2-14" data-line-number="14"><span class="co">#&gt; $ published_at &lt;dttm&gt; 2019-06-24 19:58:31</span></a>
+<a class="sourceLine" id="cb2-15" data-line-number="15"><span class="co">#&gt; $ edited_at    &lt;dttm&gt; 2019-06-24 22:11:38</span></a>
+<a class="sourceLine" id="cb2-16" data-line-number="16"><span class="co">#&gt; $ by           &lt;chr&gt; "김승환"</span></a>
+<a class="sourceLine" id="cb2-17" data-line-number="17"></a>
+<a class="sourceLine" id="cb2-18" data-line-number="18">news<span class="op">$</span>title</a>
+<a class="sourceLine" id="cb2-19" data-line-number="19"><span class="co">#&gt; [1] "민노총, 文정부와 전쟁 선포… \"도 넘었다\" 여론 냉담"</span></a>
+<a class="sourceLine" id="cb2-20" data-line-number="20">news<span class="op">$</span>from</a>
+<a class="sourceLine" id="cb2-21" data-line-number="21"><span class="co">#&gt; [1] "세계일보"</span></a>
+<a class="sourceLine" id="cb2-22" data-line-number="22">news<span class="op">$</span>published_at</a>
+<a class="sourceLine" id="cb2-23" data-line-number="23"><span class="co">#&gt; [1] "2019-06-24 19:58:31 KST"</span></a>
+<a class="sourceLine" id="cb2-24" data-line-number="24">news<span class="op">$</span>edited_at</a>
+<a class="sourceLine" id="cb2-25" data-line-number="25"><span class="co">#&gt; [1] "2019-06-24 22:11:38 KST"</span></a>
+<a class="sourceLine" id="cb2-26" data-line-number="26">news<span class="op">$</span>by</a>
+<a class="sourceLine" id="cb2-27" data-line-number="27"><span class="co">#&gt; [1] "김승환"</span></a>
+<a class="sourceLine" id="cb2-28" data-line-number="28">news<span class="op">$</span>body <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb2-29" data-line-number="29"><span class="st">  </span><span class="kw"><a href="https://stringr.tidyverse.org/reference/str_wrap.html">str_wrap</a></span>(<span class="dv">80</span>) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb2-30" data-line-number="30"><span class="st">  </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/cat">cat</a></span>()</a>
+<a class="sourceLine" id="cb2-31" data-line-number="31"><span class="co">#&gt; 국회 앞 집회에서 차단벽을 부수고 경찰을 폭행하는 등 불법행위를 주도한 혐의로 구</span></a>
+<a class="sourceLine" id="cb2-32" data-line-number="32"><span class="co">#&gt; 속영장이 청구된 김명환 민주노총 위원장이 21일 서울 양천구 서울남부지방법원에서</span></a>
+<a class="sourceLine" id="cb2-33" data-line-number="33"><span class="co">#&gt; 영장실질심사를 받은 뒤 법정을 나서고 있다. 연합뉴스 “문재인 대통령은 끝내 민노총</span></a>
+<a class="sourceLine" id="cb2-34" data-line-number="34"><span class="co">#&gt; 을 짓밟고 김명환 위원장 동지를 잡아 가뒀다. 노동존중 재벌개혁에서 노동탄압 재벌</span></a>
+<a class="sourceLine" id="cb2-35" data-line-number="35"><span class="co">#&gt; 존중 사회로 가겠다는 문재인정부의 선전포고다.” 김경자 전국민주노총조합총연맹(민</span></a>
+<a class="sourceLine" id="cb2-36" data-line-number="36"><span class="co">#&gt; 노총) 위원장 직무대행이 24일 청와대 사랑채 앞에서 열린 ‘문재인정부 노동탄압 규</span></a>
+<a class="sourceLine" id="cb2-37" data-line-number="37"><span class="co">#&gt; 탄과 민주노총 대응투쟁 계획 발표’ 기자회견에서 밝힌 결의문 일부다. 민노총은 이</span></a>
+<a class="sourceLine" id="cb2-38" data-line-number="38"><span class="co">#&gt; 날 김 위원장 구속 대응 차원에서 7월 총파업 등 대정부 강경투쟁 계획을 공식 발표했</span></a>
+<a class="sourceLine" id="cb2-39" data-line-number="39"><span class="co">#&gt; 다. 최저임금위원회, 일자리위원회 등 사회적 대화 기구 불참 카드도 검토하겠다고 밝</span></a>
+<a class="sourceLine" id="cb2-40" data-line-number="40"><span class="co">#&gt; 혔다. 청와대는 이날 김 위원장 구속과 관련해 “무척 안타까운 일이지만 사법부의 결</span></a>
+<a class="sourceLine" id="cb2-41" data-line-number="41"><span class="co">#&gt; 정”이라고만 밝혔다. 청와대가 김 위원장 구속에 대해 입장을 공개 표명한 건 처음이</span></a>
+<a class="sourceLine" id="cb2-42" data-line-number="42"><span class="co">#&gt; 다. “정부 노동탄압 규탄” 24일 오전 서울 종로구 청와대 사랑채 앞에서 민노총 중앙</span></a>
+<a class="sourceLine" id="cb2-43" data-line-number="43"><span class="co">#&gt; 집행위원들이 ‘문재인정부 노동탄압 규탄과 민주노총 대응투쟁 계획 발표 기자회견’을</span></a>
+<a class="sourceLine" id="cb2-44" data-line-number="44"><span class="co">#&gt; 열고 구호를 외치고 있다. 남정탁 기자 정당한 법절차에 따른 결정에 민노총이 과도</span></a>
+<a class="sourceLine" id="cb2-45" data-line-number="45"><span class="co">#&gt; 하게 정치적 해석에 나선 것 자체에 대해 전문가와 시민들의 반응은 냉담하다. 오히려</span></a>
+<a class="sourceLine" id="cb2-46" data-line-number="46"><span class="co">#&gt; 전문가들은 “(민노총의 행보는) 사회적 공감대가 결여된 결정으로, 일반 시민들로부터</span></a>
+<a class="sourceLine" id="cb2-47" data-line-number="47"><span class="co">#&gt; 고립을 자초하고 있다”고 비판하고 있다. 성태윤 연세대 교수(경제학부)는 “문재인정</span></a>
+<a class="sourceLine" id="cb2-48" data-line-number="48"><span class="co">#&gt; 부가 그간 경제에 미치는 부정적 영향에도 불구하고 노동 이슈와 관련해 민노총에 우</span></a>
+<a class="sourceLine" id="cb2-49" data-line-number="49"><span class="co">#&gt; 호적인 방향으로 정책을 수행했는데도 민노총의 전면적 총파업은 적절하다고 보기 어</span></a>
+<a class="sourceLine" id="cb2-50" data-line-number="50"><span class="co">#&gt; 렵다”고 지적했다. 윤창현 서울시립대 교수(경영학부)도 “법원의 판단에 따라 이뤄진</span></a>
+<a class="sourceLine" id="cb2-51" data-line-number="51"><span class="co">#&gt; 것을 이유로 총파업을 벌이는 게 과연 전체 근로자의 권익을 위한 결정인지 의문”이라</span></a>
+<a class="sourceLine" id="cb2-52" data-line-number="52"><span class="co">#&gt; 면서 “‘촛불청구서’라는 말이 들릴 정도로 민노총이 무소불위 모습을 보이는 데 대해</span></a>
+<a class="sourceLine" id="cb2-53" data-line-number="53"><span class="co">#&gt; 사회가 불편한 시선을 많이 보내고 있다”고 비판했다. 민노총 측은 이번 결정이 단순</span></a>
+<a class="sourceLine" id="cb2-54" data-line-number="54"><span class="co">#&gt; 히 김 위원장 구속만이 아니라 정부의 저임금·장시간 노동 문제 관련 움직임 대응 차</span></a>
+<a class="sourceLine" id="cb2-55" data-line-number="55"><span class="co">#&gt; 원에서 이뤄진 것이란 입장이다. 김형석 민노총 대변인은 “최저임금 산입범위 확대,</span></a>
+<a class="sourceLine" id="cb2-56" data-line-number="56"><span class="co">#&gt; 탄력근로제 확대 등 저임금·장시간 노동을 강화하는 법안의 국회 통과를 막기 위해 집</span></a>
+<a class="sourceLine" id="cb2-57" data-line-number="57"><span class="co">#&gt; 회를 벌이던 중 김 위원장이 구속됐다”면서 “영장은 법원 판단 아래 발부되지만 경찰,</span></a>
+<a class="sourceLine" id="cb2-58" data-line-number="58"><span class="co">#&gt; 검찰을 거쳐서 영장 청구가 이뤄진다는 걸 고려하면 문재인정부가 책임을 피할 수 없</span></a>
+<a class="sourceLine" id="cb2-59" data-line-number="59"><span class="co">#&gt; 다”고 반박했다. 김 위원장 직무대행은 이날 “300명 넘는 민노총 간부와 조합원 동지</span></a>
+<a class="sourceLine" id="cb2-60" data-line-number="60"><span class="co">#&gt; 들이 집결해 문재인정부 노동탄압에 대한 분노로 강력한 규탄 투쟁을 결의했다”며 “이</span></a>
+<a class="sourceLine" id="cb2-61" data-line-number="61"><span class="co">#&gt; 분노는 결국 7·3 공공부문 비정규노동자 총파업과 7·18 문재인정부 노동탄압 규탄 총</span></a>
+<a class="sourceLine" id="cb2-62" data-line-number="62"><span class="co">#&gt; 파업 투쟁으로 불타오를 것”이라고 말했다. 비정규노동자 총파업의 민노총 측 참여 예</span></a>
+<a class="sourceLine" id="cb2-63" data-line-number="63"><span class="co">#&gt; 상 인원은 20만명이다. 7월18일로 예정된 총파업 규모는 오는 28일 열리는 전국 단위</span></a>
+<a class="sourceLine" id="cb2-64" data-line-number="64"><span class="co">#&gt; 사업장 대표자 결의대회에서 대강의 윤곽이 나올 것으로 보인다. 민노총은 거리 투쟁</span></a>
+<a class="sourceLine" id="cb2-65" data-line-number="65"><span class="co">#&gt; 과 함께 사회적 대화 불참도 검토한다는 입장이다. 김 직무대행은 “최저임금위원회에</span></a>
+<a class="sourceLine" id="cb2-66" data-line-number="66"><span class="co">#&gt; 서 빠지는 걸 검토할 것”이라면서 “다만 위원회에서 현재 최저임금 차등적용을 검토</span></a>
+<a class="sourceLine" id="cb2-67" data-line-number="67"><span class="co">#&gt; 중인 상황이라 표결에 빠지면 불리한 결과를 초래할 수 있어 당분간은 참석할 예정”이</span></a>
+<a class="sourceLine" id="cb2-68" data-line-number="68"><span class="co">#&gt; 라고 밝혔다. 최저임금위 외 다른 기구 불참이 잇따를 가능성도 크다. 김 직무대행은</span></a>
+<a class="sourceLine" id="cb2-69" data-line-number="69"><span class="co">#&gt; “일단 개인 판단 아래 이번주 금요일(28일) 예정된 일자리위원회는 불참할 것”이라며</span></a>
+<a class="sourceLine" id="cb2-70" data-line-number="70"><span class="co">#&gt; “민주노총 차원에선 더 논의해봐야 한다”고 설명했다. 민노총은 지난해 11월 기준 53</span></a>
+<a class="sourceLine" id="cb2-71" data-line-number="71"><span class="co">#&gt; 개 정부 위원회에 참여 중이다. 김승환·이강진·박현준 기자hwan@segye.com [ⓒ 세계일</span></a>
+<a class="sourceLine" id="cb2-72" data-line-number="72"><span class="co">#&gt; 보 &amp; Segye.com, 무단전재 및 재배포 금지]</span></a></code></pre></div>
 </div>
 <div id="----" class="section level2">
 <h2 class="hasAnchor">
@@ -153,7 +206,7 @@
 #&gt; $ title        &lt;chr&gt; "추신수, 희생플라이로 1타점 추가…타율 0.285"
 #&gt; $ body         &lt;chr&gt; "텍사스 추신수(37)가 희생플라이로 타점을 올렸다.추신수는 28일(한국시간) 코메리카파크에…
 #&gt; $ from         &lt;chr&gt; "일간스포츠"
-#&gt; $ published_at &lt;dttm&gt; 2019-07-07 10:23:58
+#&gt; $ published_at &lt;dttm&gt; 2019-07-07 10:35:19
 #&gt; $ edited_at    &lt;dttm&gt; NA
 #&gt; $ by           &lt;chr&gt; NA
 #&gt; [1] "http://www.mediatoday.co.kr/news/articleView.html?idxno=200760"
@@ -282,7 +335,7 @@
 #&gt; $ from         &lt;chr&gt; "한겨레"
 #&gt; $ published_at &lt;dttm&gt; 2019-06-24 20:07:00
 #&gt; $ edited_at    &lt;dttm&gt; 2019-06-24 20:20:00
-#&gt; $ by           &lt;chr&gt; "고한솔,장예지"
+#&gt; $ by           &lt;chr&gt; "고한솔"
 #&gt; [1] "http://www.dailian.co.kr/news/view/805409"
 #&gt; Observations: 1
 #&gt; Variables: 6
