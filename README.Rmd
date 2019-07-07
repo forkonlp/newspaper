@@ -37,17 +37,26 @@ This is a basic example which shows you how to solve a common problem:
 ```{r example, message=F}
 library(newspaper)
 library(dplyr)
+library(stringr)
 
-np_news("http://www.mediatoday.co.kr/news/articleView.html?idxno=201015")
+news <- np_news("http://www.segye.com/newsView/20190624511168")
 
-np_news("http://www.mediatoday.co.kr/news/articleView.html?idxno=201015") %>% 
+news %>% 
   glimpse()
 
+news$title
+news$from
+news$published_at
+news$edited_at
+news$by
+news$body %>% 
+  str_wrap(80) %>% 
+  cat()
 ```
 
 ## 네이버 뉴스 스탠드 주요 언론사
 
-```{r echo=F}
+```{r echo=F, cache=T}
 library(tibble)
 library(purrr)
 
